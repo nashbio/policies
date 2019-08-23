@@ -1,63 +1,56 @@
 # 1. Introduction
 
-Datica Health, Inc ("Datica") is committed to ensuring the confidentiality, privacy, integrity, and availability of all electronic protected health information (ePHI) it receives, maintains, processes and/or transmits on behalf of its Customers. As providers of compliant, hosted infrastructure used by health technology vendors, developers, designers, agencies, custom development shops, and enterprises, Datica strives to maintain compliance, proactively address information security, mitigate risk for its Customers, and assure known breaches are completely and effectively communicated in a timely manner. The following documents address core policies used by Datica to maintain compliance and assure the proper protections of infrastructure used to store, process, and transmit ePHI for Datica Customers.
+Nashville Biosciences, LLC ("Nashbio") is committed to ensuring the confidentiality, privacy, integrity, and availability of all electronic protected health information (ePHI) it receives, maintains, processes and/or transmits on behalf of its Customers. As providers of compliant, hosted infrastructure used by health technology vendors, developers, designers, agencies, custom development shops, and enterprises, Nashbio strives to maintain compliance, proactively address information security, mitigate risk for its Customers, and assure known breaches are completely and effectively communicated in a timely manner. The following documents address core policies used by Nashbio to maintain compliance and assure the proper protections of infrastructure used to store, process, and transmit ePHI for Nashbio Customers.
 
-Datica provides secure and compliant cloud-based software. This hosted software falls into two broad categories: 1) **Platform as a Service (PaaS)** and 2) **Platform Add-ons**. These Categories are cited throughout policies as Customers in each category inherit different policies, procedures, and obligations from Datica.
+Nashbio provides secure and compliant cloud-based data infrastructure. This hosted data falls into two broad categories: 1) **Data as a Service (DaaS)** and 2) **Platform Add-ons**. These Categories are cited throughout policies as Customers in each category inherit different policies, procedures, and obligations from Nashbio.
 
-## 1.1 Platform as a Service (PaaS)
+## 1.1 Data as a Service (DaaS)
 
-PaaS Customers utilize hosted software and infrastructure from Datica to deploy, host, and scale custom developed applications and configured databases. These customers are deployed into compliant containers run on systems secured and managed by Datica. Datica does not have insight or access into application level data of PaaS Customers and, as such, does not have the ability to secure or manage risk associated with application level vulnerabilities and security weaknesses. Datica makes every effort to reduce the risk of unauthorized disclosure, access, and/or breach of PaaS Customer data through network (firewalls, dedicated IP spaces, etc) and server settings (encryption at rest and in transit, OSSEC throughout the Platform, etc).
+DaaS Customers utilize hosted data infrastructure from Nashbio to deploy, host, and scale custom developed applications and configured databases. These customers are deployed into compliant containers run on systems secured and managed by Nashbio. Nashbio does not have insight or access into application level data of DaaS Customers and, as such, does not have the ability to secure or manage risk associated with application level vulnerabilities and security weaknesses. Nashbio makes every effort to reduce the risk of unauthorized disclosure, access, and/or breach of DaaS Customer data through network (firewalls, dedicated IP spaces, etc) and server settings (encryption at rest and in transit, OSSEC throughout the Platform, etc).
 
 ## 1.2 Compliance Inheritance
 
-Datica provides compliant hosted software infrastructure for its Customers. Datica has been through a HIPAA compliance audit by a national third-party compliance firm to validate and map organizational policies and technical controls to HIPAA rules. Datica's company policies, procedures, and technologies are HITRUST Certified. Datica's service offerings are available on AWS, Azure, Rackspace, and SoftLayer; current production systems on these platforms are included in Datica's third-party audits and HITRUST certification.
+Nashbio provides compliant hosted software infrastructure for its Customers. Nashbio has been through a HIPAA compliance audit by a national third-party compliance firm to validate and map organizational policies and technical controls to HIPAA rules. Nashbio's service offerings are available on Google Cloud Platform; current production systems on these platforms are included in Nashbio's third-party audits.
 
-Datica signs business associate agreements (BAAs) with its Customers. These BAAs outline Datica obligations and Customer obligations, as well as liability in the case of a breach. In providing infrastructure and managing security configurations that are a part of the technology requirements that exist in HIPAA and HITRUST, as well as future compliance frameworks, Datica manages various aspects of compliance for Customers. The aspects of compliance that Datica manages for Customers are inherited by Customers, and Datica assumes the risk associated with those aspects of compliance. In doing so, Datica helps Customers achieve and maintain compliance, as well as mitigates Customers' risk.
+Nashbio does not sign business associate agreements (BAAs) with its Customers as it does not explicitly deal with PHI. 
 
-Datica does not act as a covered entity. When Datica does operate as a business associate (not a subcontractor), Datica does not interface with users to obtain or provide access to ePHI. Access to ePHI is through our customers' applications.
+Nashbio does not act as a covered entity. Nashbio does not operate as a business associate (not a subcontractor), and Nashbio does not interface with users to obtain or provide access to ePHI. 
 
-Certain aspects of compliance cannot be inherited. Because of this, Datica Customers, in order to achieve full compliance or HITRUST Certification, must implement certain organizational policies. These policies and aspects of compliance fall outside of the services and obligations of Datica.
+Certain aspects of compliance cannot be inherited. Because of this, Nashbio Customers, in order to achieve full compliance or HITRUST Certification, must implement certain organizational policies. These policies and aspects of compliance fall outside of the services and obligations of Nashbio.
 
-Mappings of HIPAA Rules to Datica controls and a mapping of what Rules are inherited by Customers, both Platform Customers and Add-on Customers, are covered in [§2](#2.-hipaa-inheritance).
+Mappings of HIPAA Rules to Nashbio controls and a mapping of what Rules are inherited by Customers, both Platform Customers and Add-on Customers, are covered in [§2](#2.-hipaa-inheritance).
 
-## 1.3 Datica Organizational Concepts
+## 1.3 Nashbio Organizational Concepts
 
-The physical infrastructure environment is hosted at [Rackspace](https://www.rackspace.com/), [Amazon Web Services](https://aws.amazon.com/) (AWS), [Microsoft Azure](https://azure.microsoft.com/), and [IBM SoftLayer](http://www.softlayer.com/). The network components and supporting network infrastructure are contained within the Rackspace, AWS, Azure, and SoftLayer infrastructures and managed by Rackspace, AWS, Microsoft, and IBM (respectively). Datica does not have physical access into the network components. The Datica environment consists of Cisco firewalls; nginx web servers; Java, Python, and Go application servers; Percona and PostgreSQL database servers; Logstash logging servers; Linux Ubuntu monitoring servers; Windows Server virtual machines; Chef and Salt configuration management servers; OSSEC IDS services; Docker containers; and developer tool servers running on Linux Ubuntu.
+The physical infrastructure environment is hosted at [Google Cloud Platform](https://cloud.google.com/) (GCP), [Amazon Web Services](https://aws.amazon.com/) (AWS), and [DCBlox](http://www.dcblox.com/). The network components and supporting network infrastructure are contained within the GCP, AWS, and DCBlox infrastructures and managed by GCP, AWS, and DCBlox (respectively). Nashbio does not have physical access into the network components. The Nashbio environment consists of managed services provided by GCP, AWS, and DCBlox; Python, GO and JavaScript applications; Docker containers; and developer tool servers running on Linux Ubuntu or Linux Debian.
 
-Within the Datica Platform on Rackspace, AWS, Azure, and SoftLayer, all data transmission is encrypted and all hard drives are encrypted so data at rest is also encrypted; this applies to all servers - those hosting Docker containers, databases, APIs, log servers, etc. Datica assumes all data *may* contain ePHI, even though our Risk Assessment does not indicate this is the case, and provides appropriate protections based on that assumption.
+Within the Nashbio Platform on GCP, AWS, and DCBlox all data transmission is encrypted and all hard drives are encrypted so data at rest is also encrypted; this applies to all servers - those hosting Docker containers, databases, APIs, log servers, etc. Nashbio assumes all data *may* contain ePHI, even though our Risk Assessment does not indicate this is the case, and provides appropriate protections based on that assumption.
 
-In the case of PaaS Customers, it is the responsibility of the Customer to restrict, secure, and assure the privacy of all ePHI data at the Application Level, as this is not under the control or purview of Datica.
+In the case of DaaS Customers, it is the responsibility of the Customer to restrict, secure, and assure the privacy of all data at the Application Level, as this is not under the control or purview of Nashbio.
 
 The data and network segmentation mechanism differs depending on the primitives offered by the underlying cloud provider infrastructure:
 
-* Within Rackspace, hosted load balancers segment data and traffic while Cisco firewalls route traffic to private subnets for PaaS Customers and for Platform Add-ons.
-* Within AWS, hosted load balancers segment data across dedicated Virtual Private Clouds for PaaS Customers and for Platform Add-ons.
-* Within Azure, hosted load balancers segment data across dedicated Virtual Networks for PaaS Customers and for Platform Add-ons.
-* Within SoftLayer, hosted load balancers segment data across dedicated Private Networks for PaaS Customers and for Platform Add-ons.
+* Within GCP, in [BigQuery](https://cloud.google.com/solutions/bigquery-data-warehouse), hosted data is stored within Colossus and distributed across multiple physical disks and replicated across multiple data centers.  In [Cloud Storage](https://cloud.google.com/storage/docs/object-versioning), data blobs are versioned and replicated across mutiple physical disks.  
+* Within AWS, [s3](https://docs.aws.amazon.com/AmazonS3/latest/dev/disaster-recovery-resiliency.html), hosted data is encrypted by default and versioned for redundancy for DaaS Customers.
+* Within DCBlox, data is stored redundantly within the data center.
 
-The segmentation strategies employed by Datica effectively create RFC 1918, or dedicated, private segmented and separated networks and IP spaces, for each PaaS Customer and for Platform Add-ons.
-
-Additionally, IPtables is used on each server for logical segmentation. IPtables is configured to restrict access to only justified ports and protocols. Datica has implemented strict logical access controls so that only authorized personnel are given access to the internal management servers. The environment is configured so that data is transmitted from the load balancers to the application servers over a TLS encrypted session.
-
-In the case of Platform Add-ons, once the data is received from the application server, a series of Application Programming Interface (API) calls is made to the database servers where the ePHI resides. The ePHI is separated into PostgreSQL and Percona databases through programming logic built so that access to one database server will not present you with the full ePHI spectrum.
-
-The VPN server, nginx web server, and application servers are externally facing and accessible via the Internet. The database servers, where the ePHI resides, are located on the internal Datica network and can only be accessed through a bastion host over a VPN connection. Access to the internal database is restricted to a limited number of personnel and strictly controlled to only those personnel with a business-justified reason. Remote access to internal servers is not accessible except through load balancers.
+The segmentation strategies employed by Nashbio effectively create RFC 1918, or dedicated, private segmented and separated networks and IP spaces, for each DaaS Customer and for Platform Add-ons.  Where non-manged services are used, dedicated VPC networks are provisioned and used only with specified regions.
 
 All Platform Add-ons and operating systems are tested end-to-end for usability, security, and impact prior to deployment to production.
 
 ## 1.4 Requesting Audit and Compliance Reports
 
-Datica, at its sole discretion, shares audit reports, including its HITRUST reports and Corrective Action Plans (CAPs), with customers on a case by case basis. All audit reports are shared under explicit NDA in Datica format between Datica and party to receive materials. Audit reports can be requested by Datica workforce members for Customers or directly by Datica Customers.
+Nashbio, at its sole discretion, shares audit reports and Corrective Action Plans (CAPs), with customers on a case by case basis. All audit reports are shared under explicit NDA in Nashbio format between Nashbio and party to receive materials. Audit reports can be requested by Nashbio workforce members for Customers or directly by Nashbio Customers.
 
 The following process is used to request audit reports:
 
-1. Email is sent to compliance-reports@datica.com. In the email, please specify the type of report being requested and any required timelines for the report.
-2. Datica staff will log an issue with the details of the request into the Datica Quality Management System. The Datica Quality Management System is used to track requests' status and outcomes.
-3. Datica will confirm if a current NDA is in place with the party requesting the audit report. If there is no NDA in place, Datica will send one for execution.
-4. Once it has been confirmed that an NDA is executed, Datica staff will move the issue to "Under Review".
-5. The Datica Security Officer or Privacy Officer must Approve or Reject the Issue. If the Issue is rejected, Datica will notify the requesting party that we cannot share the requested report.
-6. If the issue has been Approved, Datica will send the customer the requested audit report and complete the Quality Management System issue for the request.
+1. Email is sent to compliance-reports@nashvillebiosciences.com. In the email, please specify the type of report being requested and any required timelines for the report.
+2. Nashbio staff will log an issue with the details of the request into the Nashbio Quality Management System. The Nashbio Quality Management System is used to track requests' status and outcomes.
+3. Nashbio will confirm if a current NDA is in place with the party requesting the audit report. If there is no NDA in place, Nashbio will send one for execution.
+4. Once it has been confirmed that an NDA is executed, Nashbio staff will move the issue to "Under Review".
+5. The Nashbio Security Officer or Privacy Officer must Approve or Reject the Issue. If the Issue is rejected, Nashbio will notify the requesting party that we cannot share the requested report.
+6. If the issue has been Approved, Nashbio will send the customer the requested audit report and complete the Quality Management System issue for the request.
 
 ## 1.5 Version Control
 
-Refer to the GitHub repository at [https://github.com/catalyzeio/policies/](https://github.com/catalyzeio/policies/) for the full version history of these policies.
+Refer to the GitHub repository at [https://github.com/nashbio/policies/](https://github.com/nashbio/policies/) for the full version history of these policies.
