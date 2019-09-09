@@ -14,12 +14,12 @@ NashBio standardizes and automates configuration management through the use of C
 
 ## 9.2 Configuration Management Policies
 
-1. Chef and Salt are used to standardize and automate configuration management.
+1. All code used to standardize and automate configuration management is stored in Github.
 2. No systems are deployed into NashBio environments without approval of the NashBio CTO.
 3. All changes to production systems, network devices, and firewalls are approved by the NashBio CTO before they are implemented to assure they comply with business and security requirements.
 4. All changes to production systems are tested before they are implemented in production.
 5. Implementation of approved changes are only performed by authorized personnel.
-6. Tooling to generate an up-to-date inventory of systems, including corresponding architecture diagrams for related products and services, is hosted on GitLab.
+6. Tooling to generate an up-to-date inventory of systems, including corresponding architecture diagrams for related products and services, is hosted on GitHub.
    * All systems are categorized as production and utility to differentiate based on criticality.
    * The Security Officer maintains scripts to generate inventory lists on demand using APIs provided by each cloud provider.
    * These scripts are used to generate the diagrams and asset lists required by the Risk Assessment phase of NashBio's Risk Management procedures ([§4.3.1](#4.3-risk-management-procedures)).
@@ -28,12 +28,12 @@ NashBio standardizes and automates configuration management through the use of C
 8. All software and systems are tested using unit tests and end to end tests.
 9. All committed code is reviewed using pull requests to assure software code quality and proactively detect potential security issues in development.
 10. NashBio utilizes development and staging environments that mirror production to assure proper function.
-11. NashBio also deploys environments locally using Vagrant to assure functionality before moving to staging or production.
-12. All formal change requests require unique ID and authentication.
-13. NashBio uses the [Security Technical Implementation Guides (STIGs)](http://iase.disa.mil/stigs/) published by the Defense Information Systems Agency as a baseline for hardening systems.
-    * Windows-based systems use a baseline Active Directory group policy configuration in conjunction with the Windows Server 2012 STIG.
-    * Linux-based systems use a Red Hat Enterprise Linux STIG which has been adapted for Ubuntu and improved based on the results of subsequent vulnerability scans and risk assessments.
-14. Clocks are continuously synchronized to an authoritative source across all systems using NTP or a platform-specific equivalent. Modifying time data on systems is restricted.
+11. All formal change requests require unique ID and authentication.
+12. NashBio uses the [Security Technical Implementation Guides (STIGs)](http://iase.disa.mil/stigs/) published by the Defense Information Systems Agency as a baseline for hardening systems.
+    * Linux-based systems use a Debian base image that has been reviewed and improved based on the results of subsequent vulnerability scans and risk assessments.
+13. Clocks are continuously synchronized to an authoritative source across all systems using NTP or a platform-specific equivalent. Modifying time data on systems is restricted.
+
+## Below needs to be reviewed and updated with current production automation requirements
 
 ## 9.3 Provisioning Production Systems
 
@@ -43,7 +43,6 @@ NashBio standardizes and automates configuration management through the use of C
 2. The CTO, or an authorized delegate of the CTO, must approve the provisioning request before any new system can be provisioned.
 3. Once provisioning has been approved, the ops team member must configure the new system according to the standard baseline chosen for the system's role.
    * For Linux systems, this means adding the appropriate grains to the Salt configuration file and running a `highstate` operation.
-   * For Windows systems, this means adding the appropriate roles to the system's Chef profile and forcing a Chef run.
 4. If the system will be used to house production data (ePHI), the ops team member must add an encrypted block data volume to the VM during provisioning.
    * For systems on AWS, the ops team member must add an encrypted Elastic Block Storage (EBS) volume.
    * For systems on other cloud providers, the ops team member must add a block data volume and set up OS-level data encryption using Salt or Chef.
@@ -70,20 +69,6 @@ NashBio standardizes and automates configuration management through the use of C
    * Configuring audit logging as described in the [Auditing Policy section](#8.-auditing-policy).
 2. Any additional Salt states applied to the Linux system must be clearly documented by the ops team member in the DT request by specifying the purpose of the new system.
 
-### 9.3.2 Provisioning Windows Systems
-
-1. Windows systems have their baseline security configuration applied via the combination of Group Policy settings and Chef recipes. These baseline settings cover:
-   * Joining the Windows Domain Controller and applying the Active Directory Group Policy configuration.
-   * Ensuring that the machine is up-to-date with security patches and is configured to apply patches in accordance with our policies.
-   * Stopping and disabling any unnecessary OS services.
-   * Installing and configuring the OSSEC IDS agent.
-   * Configuring 15-minute session inactivity timeouts.
-   * Installing and configuring the Avast virus scanner.
-   * Configuring transport encryption according to the requirements described in [§17.9](#17.9-transmission-security).
-   * Configuring the system clock, including ensuring that modifying system time cannot be performed by unprivileged users.
-   * Configuring audit logging as described in the [Auditing Policy section](#8.-auditing-policy).
-2. Any additional Salt states applied to the Linux system must be clearly documented by the ops team member in the DT request by specifying the purpose of the new system.
-
 ### 9.3.3 Provisioning Management Systems
 
 1. Provisioning management systems such as Salt servers, LDAP servers, or VPN appliances follows the same procedure as provisioning a production system.
@@ -103,7 +88,7 @@ NashBio standardizes and automates configuration management through the use of C
    * Changes to Salt states or pillar values.
    * Changes to Chef recipes.
    * For configuration changes that cannot be handled by Chef or Salt, a runbook describing exactly what changes will be made and by whom.
-2. Configuration changes to Chef recipes or Salt states must be initiated by creating a Merge Request in GitLab.
+2. Configuration changes to Chef recipes or Salt states must be initiated by creating a Merge Request in GitHub.
    * The ops team member will create a feature branch and make their changes on that branch.
    * The ops team member must test their configuration change locally when possible, or on a development and/or staging sandbox otherwise.
    * At least one other ops team member must review the Chef or Salt change before merging the change into the main branch.
@@ -128,15 +113,15 @@ NashBio standardizes and automates configuration management through the use of C
 2. Developers are strongly encouraged to follow the [commit message conventions suggested by GitHub](https://github.com/blog/926-shiny-new-commit-styles).
    * Commit messages should be wrapped to 72 characters.
    * Commit messages should be written in the present tense. This convention matches up with commit messages generated by commands like git merge and git revert.
-3. Once the feature and corresponding tests are complete, a pull request will be created using the GitHub/GitLab web interface. The pull request should indicate which feature or defect is being addressed and should provide a high-level description of the changes made.
+3. Once the feature and corresponding tests are complete, a pull request will be created using the GitHub/GitHub web interface. The pull request should indicate which feature or defect is being addressed and should provide a high-level description of the changes made.
 4. Code reviews are performed as part of the pull request procedure. Once a change is ready for review, the author(s) will notify other engineers using an appropriate mechanism, typically via an `@channel` message in Slack.
    * Other engineers will review the changes, using the guidelines above.
    * Engineers should note all potential issues with the code; it is the responsibility of the author(s) to address those issues or explain why they are not applicable.
-5. If the feature or defect interacts with ePHI, or controls access to data potentially containing ePHI, the code changes must be reviewed by two members of NashBio's Blue Team (software security team) before the feature is marked as complete.
-   * The Blue Team members will provide a security analysis of features to ensure they satisfy NashBio's compliance and security commitments.
+5. If the feature or defect interacts with ePHI, or controls access to data potentially containing ePHI, the code changes must be reviewed by the CTO before the feature is marked as complete.
+   * The CTO will provide a security analysis of features to ensure they satisfy NashBio's compliance and security commitments.
    * This review must include a security analysis for potential vulnerabilities such as those listed in the [OWASP Top 10](https://www.owasp.org/index.php/Top10) or the [CWE top 25](http://cwe.mitre.org/top25/).
    * This review must also verify that any actions performed by authenticated users will generate appropriate audit log entries.
-   * Blue Team members are required to undergo annual training on identifying the most common software vulnerabilities and will receive ongoing training on NashBio's compliance and security requirements.
+   * The CTO is required to undergo annual training on identifying the most common software vulnerabilities and will receive ongoing training on NashBio's compliance and security requirements.
 6. Once the review process finishes, each reviewer should leave a comment on the pull request saying "looks good to me" (often abbreviated as "LGTM"), at which point the original author(s) may merge their change into the release branch.
 
 ## 9.7 Software Release Procedures

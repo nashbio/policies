@@ -5,12 +5,12 @@ NashBio shall audit access and activity of electronic protected health informati
 It is the policy of NashBio to safeguard the confidentiality, integrity, and availability of applications, systems, and networks. To ensure that appropriate safeguards are in place and effective, NashBio shall audit access and activity to detect, report, and guard against:
 
 * Network vulnerabilities and intrusions;
-* Breaches in confidentiality and security of patient protected health information;
+* Breaches in confidentiality and security of subject information;
 * Performance problems and flaws in applications;
-* Improper alteration or destruction of ePHI;
+* Improper alteration or destruction of data;
 * Out of date software and/or software known to have vulnerabilities.
 
-This policy applies to all NashBio Add-on systems that store, transmit, or process ePHI.
+This policy applies to all NashBio Add-on systems that store, transmit, or process subject data.
 
 ## 8.1 Applicable Standards
 
@@ -41,19 +41,19 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
    * Assign the task of reviewing the audit reports to the workforce member responsible for the application, system, or network, the Privacy Officer, or any other individual determined to be appropriate for the task;
    * Organize and provide oversight to a team structure charged with audit compliance activities (e.g., parameters, frequency, sample sizes, report formats, evaluation, follow-up, etc.).
    * All connections to NashBio are monitored. Access is limited to certain services, ports, and destinations. Exceptions to these rules, if created, are reviewed on an annual basis.
-2. NashBio's auditing processes shall address access and activity at the following levels listed below. In the case of PaaS Customers, Application and User level auditing is the responsibility of the Customer; NashBio provides software to aggregate and view User and Application logs, but the log data collected is the responsibility of the PaaS Customer. Auditing processes may address date and time of each log-on attempt, date and time of each log-off attempt, devices used, functions performed, etc.
+2. NashBio's auditing processes shall address access and activity at the following levels listed below. In the case of DaaS Customers, Application and User level auditing is the responsibility of the Customer. Auditing processes may address date and time of each log-on attempt, date and time of each log-off attempt, devices used, functions performed, etc.  Nashbio uses Stackdriver to monitor all logs from GCP and AWS.
    * User: User level audit trails generally monitor and log all commands directly initiated by the user, all identification and authentication attempts, and data and services accessed.
    * Application: Application level audit trails generally monitor and log all user activities, including data accessed and modified and specific actions.
-   * System: System level audit trails generally monitor and log user activities, applications accessed, and other system defined specific actions. NashBio utilizes file system monitoring from OSSEC to assure the integrity of file system data.
+   * System: System level audit trails generally monitor and log user activities, applications accessed, and other system defined specific actions. 
    * Network: Network level audit trails generally monitor information on what is operating, penetrations, and vulnerabilities.
 3. NashBio shall log all incoming and outgoing traffic to into and out of its environment. This includes all successful and failed attempts at data access and editing. Data associated with this data will include origin, destination, time, and other relevant details that are available to NashBio.
-4. NashBio utilizes OSSEC to scan all systems for malicious and unauthorized software every 2 hours and at reboot of systems.
+4. NashBio utilizes Cavirin to scan all systems for malicious and unauthorized software every week and at reboot of systems.
 5. NashBio leverages process monitoring tools throughout its environment.
 6. NashBio treats its Dashboard as a Platform Add-on and, as such, it logs all activity associated with Dashboard Access.
-7. NashBio uses OSSEC to monitor the integrity of log files by utilizing OSSEC System Integrity Checking capabilities.
-8. NashBio shall identify "trigger events" or criteria that raise awareness of questionable conditions of viewing of confidential information. The "events" may be applied to the entire NashBio Platform or may be specific to a Customer, partner, business associate, Platform Add-on or application (See Listing of Potential Trigger Events below).
-9. In addition to trigger events, NashBio utilizes OSSEC log correlation functionality to proactively identify and enable alerts based on log data.
-10. Logs are reviewed weekly by the Security Officer.
+7. NashBio uses Stackdriver to monitor the integrity of log files by utilizing Stackdriver System Integrity Checking capabilities.
+8. NashBio shall identify "trigger events" or criteria that raise awareness of questionable conditions of viewing of confidential information. The "events" may be applied to the entire NashBio Platform or may be specific to a Customer, partner, business associate, or application (See Listing of Potential Trigger Events below).
+9. In addition to trigger events, NashBio utilizes Stackdriver and Cavirin log correlation functionality to proactively identify and enable alerts based on log data.
+10. Logs are reviewed monthly by the Security Officer.
 11. NashBio's Security Officer and Privacy Officer are authorized to select and use auditing tools that are designed to detect network vulnerabilities and intrusions. Such tools are explicitly prohibited by others, including Customers and Partners, without the explicit authorization of the Security Officer. These tools may include, but are not limited to:
     * Scanning tools and devices;
     * Password cracking utilities;
@@ -67,7 +67,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
     * Identification of appropriate reporting channels for audit results and required follow-up.
 13. Vulnerability testing software may be used to probe the network to identify what is running (e.g., operating system or product versions in place), whether publicly-known vulnerabilities have been corrected, and evaluate whether the system can withstand attacks aimed at circumventing security controls.
     * Testing may be carried out internally or provided through an external third-party vendor. Whenever possible, a third party auditing vendor should not be providing the organization IT oversight services (e.g., vendors providing IT services should not be auditing their own services - separation of duties).
-    * Testing shall be done on a routine basis, currently monthly.
+    * Testing shall be done on a routine basis, currently weekly via Cavirin.
 14. Software patches and updates will be applied to all systems in a timely manner.
 
 ## 8.3 Audit Requests
@@ -104,10 +104,9 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
 
 1. Audit logs shall be protected from unauthorized access or modification, so the information they contain will be made available only if needed to evaluate a security incident or for routine audit activities as outlined in this policy.
 2. All audit logs are protected in transit and encrypted at rest to control access to the content of the logs.
-3. Audit logs shall be stored on a separate system to minimize the impact auditing may have on the privacy system and to prevent access to audit trails by those with system administrator privileges.
+3. Audit logs shall be stored on a separate system to minimize the impact auditing may have on the privacy system and to prevent access to audit trails by those with system administrator privileges.  Audit logs are currently stored in a separate security-oriented cloud storage bucket (GCP).
    * Separate systems are used to apply the security principle of "separation of duties" to protect audit trails from hackers.
-   * NashBio logging servers include Elasticsearch, Logstash, and Kibana (ELK) as part of their baseline configuration to ease reviewing of audit log data. The ELK toolkit provides message summarization, reduction, and reporting functionality.
-4. For PaaS Customers choosing to use NashBio logging services, log data will be separated from the log data of other NashBio Customers.
+   * NashBio logging servers include Stackdriver as part of their baseline configuration to ease reviewing of audit log data. 
 
 ## 8.7 Workforce Training, Education, Awareness and Responsibilities
 
@@ -130,8 +129,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
    * Organizational history and experience.
    * Available storage space.
 2. Reports summarizing audit activities shall be retained for a period of six years.
-3. Audit log data is retained locally on the audit log server for a one-month period. Beyond that, log data is encrypted and moved to warm storage (currently S3) using automated scripts, and is retained for a minimum of one year.
-4. For PaaS Customers, they choose the length of backup retention and availability that NashBio will implement and enforce.
+3. Audit log data is encrypted and moved to warm storage (currently Google Cloud Storage) using automated scripts, and is retained for a minimum of one year.
 
 ## 8.10 Potential Trigger Events
 

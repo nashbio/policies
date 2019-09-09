@@ -47,7 +47,7 @@ The current NashBio Privacy Officer is Leeland Ekstrom ([leeland@nashvillebiosci
    9. Users are required to report unauthorized attempts, uses of, and theft of NashBio's systems and/or workstations;
    10. Users are required to report unauthorized access to facilities
    11. Users are required to report noted log-in discrepancies (i.e. application states user's last log-in was on a date user was on vacation);
-   12. Users may not alter ePHI maintained in a database, unless authorized to do so by a NashBio Customer;
+   12. Users may not alter ePHI maintained in a database, unless authorized to do so by a NashBio Security Officer;
    13. Users are required to understand their role in NashBio's contingency plan;
    14. Users may not share their user names nor passwords with anyone;
    15. Requirements for users to create and change passwords;
@@ -68,7 +68,7 @@ The current NashBio Security Officer is Jud Schneider([jud@nashvillebiosciences.
 
 ### 5.3.1 Organizational Responsibilities
 
-The Security Officer, in collaboration with the Privacy Officer, is responsible for facilitating the development, testing, implementation, training, and oversight of all activities pertaining to NashBio's efforts to be compliant with the HIPAA Security Regulations, HITRUST CSF, and any other security and compliance frameworks. The intent of the Security Officer Responsibilities is to maintain the confidentiality, integrity, and availability of ePHI. The Security Officer is appointed by and reports to the Board of Directors and the CEO.
+The Security Officer, in collaboration with the Privacy Officer, is responsible for facilitating the development, testing, implementation, training, and oversight of all activities pertaining to NashBio's efforts to be compliant with the HIPAA Security Regulations, HITRUST CSF, and any other security and compliance frameworks. The intent of the Security Officer Responsibilities is to maintain the confidentiality, integrity, and availability of ePHI. The Security Officer is appointed by and reports to the Board of Directors and the COO.
 
 These organizational responsibilities include, but are not limited to the following:
 

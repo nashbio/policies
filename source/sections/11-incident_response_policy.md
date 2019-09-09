@@ -57,7 +57,7 @@ NashBio employees must report any unauthorized or suspicious activity seen on pr
    1. Direct report to management, the Security Officer, Privacy Officer, or other;
    2. Email;
    3. Phone call;
-   4. Online incident response form located [here](https://docs.google.com/a/catalyze.io/forms/d/1Hn4di9Jdw5JT8vISMh6tVUnh94VpeHucell7Ca4fKTo/viewform);
+   4. Slack;
    5. Secure Chat;
    6. Anonymously through workforce member's desired channels.
 2. The individual receiving the report facilitates completion of an [Incident Identification form](sections/IH-Identification.pdf) and notifies the Security Officer (if not already done).

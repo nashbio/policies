@@ -65,10 +65,10 @@ Access to NashBio systems and applications is limited for all users, including b
    * Rights for privileged accounts are granted by the Security Officer or Privacy Officer using the process outlined in [§7.2 paragraph 1](#7.2-access-establishment-and-modification).
 10. All application to application communication using service accounts is restricted and not permitted unless absolutely needed. Automated tools are used to limit account access across applications and systems.
 11. Generic accounts are not allowed on NashBio systems.
-12. Access is granted through encrypted, VPN tunnels that utilize two-factor authentication.
-    * Two-factor authentication is accomplished using a Time-based One-Time Password (TOTP) as the second factor.
+12. Access to production or development systems is granted through encrypted, SSL tunnels that utilize two-factor authentication.
+    * Two-factor authentication is accomplished using a Time-based One-Time Password (TOTP) or a Nashbio-provided physical security key (Yubikey) as the second factor.
     * VPN connections use 256-bit AES 256 encryption, or equivalent.
-    * VPN sessions are automatically disconnected after 30 minutes of inactivity.
+    * Sessions are automatically disconnected after 30 minutes of inactivity.
 13. In cases of increased risk or known attempted unauthorized access, immediate steps are taken by the Security and Privacy Officer to limit access and reduce risk of unauthorized access.
 14. Direct system to system, system to application, and application to application authentication and authorization are limited and controlled to restrict access.
 
@@ -76,7 +76,7 @@ Access to NashBio systems and applications is limited for all users, including b
 
 1. The level of security assigned to a user to the organization's information systems is based on the minimum necessary amount of data access required to carry out legitimate job responsibilities assigned to a user's job classification and/or to a user needing access to carry out treatment, payment, or healthcare operations.
 2. All access requests are treated on a "least-access principle."
-3. NashBio maintains a minimum necessary approach to access to Customer data. As such, NashBio, including all workforce members, does not readily have access to any ePHI.
+3. NashBio maintains a minimum necessary approach to access to sensitive data. As such, NashBio, including all workforce members, does not readily have access to any ePHI.
 
 ## 7.4 Access Authorization
 
@@ -87,14 +87,10 @@ Access to NashBio systems and applications is limited for all users, including b
 
 1. Each workforce member has and uses a unique user ID and password that identifies him/her as the user of the information system.
 2. Each Customer and Partner has and uses a unique user ID and password that identifies him/her as the user of the information system.
-3. All Customer support desk interactions must be verified before NashBio support personnel will satisfy any request having information security implications.
-   * NashBio's current support desk software, Zendesk, requires users to authenticate before submitting support tickets.
-   * Support issues submitted via NashBio's dashboard require that users authenticate with their NashBio account before submitting support tickets.
-   * Support issues submitted by email must be verified by NashBio personnel using a phone number that has been registered with the corresponding account.
 
 ## 7.6 Unique User Identification
 
-1. Access to the NashBio Platform systems and applications is controlled by requiring unique User Login IDs and passwords for each individual user and developer.
+1. Access to the NashBio Platform systems and applications is controlled by requiring unique User Login IDs and passwords for each individual user and developer.  NashBio accomplishes this using SSO infrastructure authenticated using SSO through Google and two-factor authentication.
 2. Passwords requirements mandate strong password controls (see below).
 3. Passwords are not displayed at any time and are not transmitted or stored in plain text.
 4. Default accounts on all production systems, including root, are disabled.
@@ -109,7 +105,7 @@ Access to NashBio systems and applications is limited for all users, including b
 
 ## 7.8 Employee Workstation Use
 
-All workstations at NashBio are company owned, and all are laptop Apple products running Mac OSX or Linux.
+All workstations that access sensitive data at NashBio are company owned, and all are laptop Apple products running Mac OSX or Linux.
 
 1. Workstations may not be used to engage in any activity that is illegal or is in violation of organization's policies.
 2. Access may not be used for transmitting, retrieving, or storage of any communications of a discriminatory or harassing nature or materials that are obscene or "X-rated". Harassment of any kind is prohibited. No messages with derogatory or inflammatory remarks about an individual's race, age, disability, religion, national origin, physical attributes, sexual preference, or health condition shall be transmitted or maintained. No abusive, hostile, profane, or offensive language is to be transmitted through the organization's system.
@@ -119,7 +115,7 @@ All workstations at NashBio are company owned, and all are laptop Apple products
 6. Users may not misrepresent, obscure, suppress, or replace another user's identity in transmitted or stored messages.
 7. Workstation hard drives will be encrypted using FileVault 2.0 or equivalent.
 8. All workstations have firewalls enabled to prevent unauthorized access unless explicitly granted.
-9. All workstations are to have the following messages added to the lock screen and login screen: *This computer is owned by NashBio Health, Inc. By logging in, unlocking, and/or using this computer you acknowledge you have seen, and follow, these policies (https://policy.NashBio.com) and have completed this training (https://training.NashBio.com/). Please contact us if you have problems with this - privacy@NashBio.com.*
+9. All workstations have remote wipe capabilities enabled.
 
 ## 7.9 Wireless Access Use
 
@@ -146,15 +142,14 @@ NashBio does not use paper records for any sensitive information. Use of paper f
 
 ## 7.12 Password Management
 
-1. User IDs and passwords are used to control access to NashBio systems and may not be disclosed to anyone for any reason.
+1. User IDs, passwords, and physical security keys are used to control access to NashBio systems and may not be disclosed to anyone for any reason.
 2. Users may not allow anyone, for any reason, to have access to any information system using another user's unique user ID and password.
 3. On all production systems and applications in the NashBio environment, password configurations are set to require:
    * a minimum length of 8 characters;
    * a mix of upper case characters, lower case characters, and numbers or special characters;
-   * a 90-day password expiration, or 60-day password expiration for administrative accounts;
-   * prevention of password reuse using a history of the last 6 passwords;
-   * where supported, modifying at least 4 characters when changing passwords;
-   * account lockout after 5 invalid attempts.
+   * a requirement for two factor authentication;
+   * account lockout after 10 invalid attempts;
+   * all accounts with programatic data access require the use of a physical security key (yubikey) issued by Nashbio;
 4. All system and application passwords must be stored and transmitted securely.
    * Where possible, passwords should be stored in a hashed format using a salted cryptographic hash function (SHA-256 or equivalent).
    * Passwords that must be stored in non-hashed format must be encrypted at rest pursuant to the requirements in [§17.8](#17.8-production-data-security).
@@ -167,25 +162,25 @@ NashBio does not use paper records for any sensitive information. Use of paper f
 10. All passwords used in configuration scripts are secured and encrypted.
 11. If a user believes their user ID has been compromised, they are required to immediately report the incident to the Security Office.
 12. In cases where a user has forgotten their password, the following procedure is used to reset the password.
-    * The user submits a password reset request to password-reset@NashBio.com. The request should include the system to which the user has lost access and needs the password reset.
+    * The user submits a password reset request to the CTO. The request should include the system to which the user has lost access and needs the password reset.
     * An administrator with password reset privileges is notified and connects directly with the user requesting the password reset.
     * The administrator verifies the identity of the user either in-person or through a separate communication channel such as phone or Slack.
     * Once verified, the administrator resets the password.
 
-The password-reset email inbox is used to track and store password reset requests. The Security Officer is the owner of this group and modifies membership as needed.
+Gsuite admin logging is used to track and store password reset requests. The Security Officer is the owner of this group and modifies membership as needed.
 
 ## 7.13 Access to ePHI
 
 1. Employees may not download ePHI to any workstations used to connect to production systems.
 2. Disallowing transfer of ePHI to workstations is enforced through technical measures.
-   * All production access to systems is performed through a bastion/jump host accessed through a VPN. Direct access to production systems is disallowed by NashBio's VPN configuration.
+   * All production access to systems is performed using SSL and Oauth2 authentication and where appropriate through a bastion/jump host accessed through a VPN. Direct access to production systems is disallowed by NashBio's VPN configuration.
    * On production Linux bastions, all file transfer services are disabled including file-transfer functionality of SSH services (SCP/SFTP).
-   * On production Windows bastions, local drive mappings are disabled by Group Policy settings.
-   * Configuration settings for enforcing these technical controls are managed by NashBio's configuration management tooling, Chef/Salt.
 
-## 7.14 PaaS Customer Access to Systems
+## 7.14 DaaS Customer Access to Systems
 
-NashBio grants PaaS customer secure system access via VPN connections. This access is only to Customer-specific systems, no other systems in the environment. These connections are setup at customer deployment. These connections are secured and encrypted and the only method for customers to connect to NashBio hosted systems.
+NashBio grants DaaS customer secure system access via Nashbio provided service account connections. This access is only to Customer-specific systems and databases, no other systems in the environment. These connections are setup at customer deployment. These connections are secured and encrypted and the only method for customers to connect to NashBio hosted systems.
+
+Nashbio segments customers and customer data into customer-specific cloud projects.  Data insertion into the project is performed programatically and logged via Stackdriver.
 
 In the case of data migration, NashBio does, on a case by case basis, support customers in importing data. In these cases NashBio requires that all data is secured and encrypted in transit, such as by using SFTP or SCP for transferring files.
 

@@ -2,7 +2,7 @@
 
 NashBio has procedures to create and maintain retrievable exact copies of electronic protected health information (ePHI) stored in conjunction with NashBio DaaS Customers. The policy and procedures will assure that complete, accurate, retrievable, and tested backups are available for all systems used by NashBio.
 
-Data backup is an important part of the day-to-day operations of NashBio. To protect the confidentiality, integrity, and availability of data, both for NashBio and NashBio Customers, complete backups are done daily to assure that data remains available when needed and in case of a disaster.
+Data backup is an important part of the day-to-day operations of NashBio. To protect the confidentiality, integrity, and availability of data, both for NashBio and NashBio Customers, complete backups are done on a regular basis to assure that data remains available when needed and in case of a disaster.
 
 Violation of this policy and its procedures by workforce members may result in corrective disciplinary action, up to and including termination of employment.
 
@@ -24,4 +24,4 @@ Violation of this policy and its procedures by workforce members may result in c
 	1. The primary data is ingested.
 	2. The cleaned data is versioned. 
 1. The data backups are generated automatically as a component of the versioning system
-1. A member of the Engineering team audits this to ensure a successful backup of the primary data system.
+1. A member of the Engineering team audits this to ensure a successful backup of the primary data system.  This is documented in the data ingestion report completed upon receipt of new data.

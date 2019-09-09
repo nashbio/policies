@@ -1,8 +1,10 @@
 # 10. Facility Access Policy
 
-NashBio works with Subcontractors to assure restriction of physical access to systems used as part of the NashBio Platform. NashBio and its Subcontractors control access to the physical buildings/facilities that house these systems/applications, or in which NashBio workforce members operate, in accordance to the HIPAA Security Rule 164.310 and its implementation specifications. Physical Access to all of NashBio facilities is limited to only those authorized in this policy. In an effort to safeguard ePHI from unauthorized access, tampering, and theft, access is allowed to areas only to those persons authorized to be in them and with escorts for unauthorized persons. All workforce members are responsible for reporting an incident of unauthorized visitor and/or unauthorized access to NashBio's facility.
+NashBio works with Subcontractors to assure restriction of physical access to systems used as part of the NashBio Platform. NashBio and its Subcontractors control access to the physical buildings/facilities that house these systems/applications, or in which NashBio workforce members operate, in accordance to the HIPAA Security Rule 164.310 and its implementation specifications. Physical Access to all of NashBio facilities is limited to only those authorized in this policy. In an effort to safeguard subject data from unauthorized access, tampering, and theft, access is allowed to areas only to those persons authorized to be in them and with escorts for unauthorized persons. All workforce members are responsible for reporting an incident of unauthorized visitor and/or unauthorized access to NashBio's facility.
 
-Of note, NashBio does not have ready access to ePHI, it provides cloud-based, compliant infrastructure to covered entities and business associates. NashBio does not physically house any systems used by its Platform in NashBio facilities. Physical security of our Platform servers is outlined [in §1.4](#1.4-nashbio-organizational-concepts).
+Of note, NashBio severely restricts access to ePHI only to compliant, cloud-based systems.  During normal business operations, analysts only use cloud-based toolkits for the analysis and application of de-identified subject data. NashBio does not physically house any systems used by its Platform in NashBio facilities. Physical security of our Platform servers is outlined [in §1.4](#1.4-nashbio-organizational-concepts).
+
+Also of note, all physical office locations of Nashbio are designated as remote offices.  No sensitive information is stored within physical media on local workstations.  All workstation hard drives are encrypted by default.
 
 ## 10.1 Applicable Standards
 
@@ -28,7 +30,7 @@ Of note, NashBio does not have ready access to ePHI, it provides cloud-based, co
 4. Maintenance is controlled and conducted by authorized personnel in accordance with supplier-recommended intervals, insurance policies and the organization's maintenance program.
 5. Electronic and physical media containing covered information is securely destroyed (or the information securely removed) prior to disposal.
 6. The organization securely disposes media with sensitive information.
-7. Physical access is restricted using smart locks that track all access.
+7. Physical access is restricted using locks.
    * Restricted areas and facilities are locked when unattended (where feasible).
    * Only authorized workforce members receive access to restricted areas (as determined by the Security Officer).
    * Access and keys are revoked upon termination of workforce members.
@@ -42,3 +44,4 @@ Of note, NashBio does not have ready access to ePHI, it provides cloud-based, co
    * Workstations may only be accessed and utilized by authorized workforce members to complete assigned job/contract responsibilities.
    * All workforce members are required to monitor workstations and report unauthorized users and/or unauthorized attempts to access systems/applications as per the System Access Policy.
    * All workstations purchased by NashBio are the property of NashBio and are distributed to users by the company.
+   * All workstations purchased by NashBio have remote wipe capabilities installed.
