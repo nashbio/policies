@@ -26,5 +26,5 @@ pandoc ./sections/19-employees_policy.md -s -o ~/Desktop/policies-pdf/19-employe
 pandoc ./sections/20-approved_tools_policy.md -s -o ~/Desktop/policies-pdf/20-approved_tools_policy.pdf
 pandoc ./sections/21-3rd_party_policy.md -s -o ~/Desktop/policies-pdf/21-3rd_party_policy.pdf
 pandoc ./sections/22-key_definitions.md -s -o ~/Desktop/policies-pdf/22-key_definitions.pdf
-pandoc ./sections/23-datica_hipaa_business_associate_agreement.md -s -o ~/Desktop/policies-pdf/23-datica_hipaa_business_associate_agreement.pdf
-pandoc ./sections/24-hipaa_mapping_to_datica_controls.md -s -o ~/Desktop/policies-pdf/24-hipaa_mapping_to_datica_controls.pdf
+pandoc ./sections/23-nashbio_hipaa_business_associate_agreement.md -s -o ~/Desktop/policies-pdf/23-nashbio_hipaa_business_associate_agreement.pdf
+pandoc ./sections/24-hipaa_mapping_to_nashbio_controls.md -s -o ~/Desktop/policies-pdf/24-hipaa_mapping_to_nashbio_controls.pdf
