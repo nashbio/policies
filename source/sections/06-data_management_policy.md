@@ -20,8 +20,9 @@ Violation of this policy and its procedures by workforce members may result in c
 
 ## 6.2 Backup Policy and Procedures
 
-1. Data backups of the primary data resource occur when :
+1. Data backups of the primary data resource occur when:
 	1. The primary data is ingested.
 	2. The cleaned data is versioned. 
-1. The data backups are generated automatically as a component of the versioning system
+1. The data backups are generated automatically as a component of the versioning system.
 1. A member of the Engineering team audits this to ensure a successful backup of the primary data system.  This is documented in the data ingestion report completed upon receipt of new data.
+1. Data backups and primary data sources are retained for a period of 3 years.

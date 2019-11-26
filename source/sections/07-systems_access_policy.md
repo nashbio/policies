@@ -1,6 +1,6 @@
 # 7. System Access Policy
 
-Access to NashBio systems and applications is limited for all users, including but not limited to workforce members, volunteers, business associates, contracted providers, and consultants. Access by any other entity is allowable only on a minimum necessary basis. All users are responsible for reporting an incident of unauthorized use or access of the organization's information systems. These safeguards have been established to address the HIPAA Security regulations including the following:
+Access to NashBio systems and applications is limited for all users, including but not limited to workforce members, volunteers, contracted providers, and consultants. Access by any other entity is allowable only on a minimum necessary basis. All users are responsible for reporting an incident of unauthorized use or access of the organization's information systems. These safeguards have been established to address the HIPAA Security regulations including the following:
 
 ## 7.1 Applicable Standards
 

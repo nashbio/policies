@@ -6,19 +6,17 @@ Nashbio provides secure and compliant hosted de-identified data for research and
 
 ## 1.1 Data as a Service (DaaS)
 
-DaaS Customers utilize hosted data infrastructure from Nashbio to deploy, host, and scale custom developed applications that utilize Nashbio configured databases and datasets. These customers are deployed into compliant infrastructure managed by Nashbio. Nashbio does not have insight or access into application level data of DaaS Customers and, as such, does not have the ability to secure or manage risk associated with application level vulnerabilities and security weaknesses. Nashbio makes every effort to reduce the risk of unauthorized disclosure, access, and/or breach of DaaS Customer data through network (firewalls, dedicated IP spaces, etc) and server settings (encryption at rest and in transit, OSSEC throughout the Platform, etc).
+DaaS Customers utilize hosted data infrastructure from Nashbio to deploy, host, and scale custom developed applications that utilize Nashbio configured databases and datasets. These customers are deployed into compliant infrastructure managed by Nashbio. Nashbio does not have insight or access into application level data of DaaS Customers and, as such, does not have the ability to secure or manage risk associated with application level vulnerabilities and security weaknesses. Nashbio makes every effort to reduce the risk of unauthorized disclosure, access, and/or breach of DaaS Customer data through network (firewalls, dedicated IP spaces, etc) and server settings (encryption at rest and in transit, etc).
 
 ## 1.2 Compliance Inheritance
 
-Nashbio provides compliant hosted software infrastructure for its Customers. Nashbio has been through a HIPAA compliance audit by a national third-party compliance firm to validate and map organizational policies and technical controls to HIPAA rules. Nashbio's service offerings are available on Google Cloud Platform; current production systems on these platforms are included in Nashbio's third-party audits.
+Nashbio provides compliant infrastructure, data assets owned by VUMC and other customers. Nashbio's service offerings are available on Google Cloud Platform; current production systems on these platforms are included in Nashbio's third-party audits.
+
+**FUTURE** Nashbio has been through a HIPAA compliance audit by a national third-party compliance firm to validate and map organizational policies and technical controls to HIPAA rules. 
 
 Nashbio does not sign business associate agreements (BAAs) with its Customers as it does not explicitly deal with PHI. 
 
 Nashbio does not act as a covered entity. Nashbio does not operate as a business associate (not a subcontractor), and Nashbio does not interface with users to obtain or provide access to ePHI. 
-
-Certain aspects of compliance cannot be inherited. Because of this, Nashbio Customers, in order to achieve full compliance or HITRUST Certification, must implement certain organizational policies. These policies and aspects of compliance fall outside of the services and obligations of Nashbio.
-
-Mappings of HIPAA Rules to Nashbio controls and a mapping of what Rules are inherited by Customers, both Platform Customers and Add-on Customers, are covered in [§2](#2.-hipaa-inheritance).
 
 ## 1.3 Nashbio Organizational Concepts
 

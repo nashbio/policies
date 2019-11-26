@@ -70,6 +70,10 @@ Each policy is included as its own markdown file in case you want to cherry-pick
 ### How to build the docs
 
 - Download this repository
+- `apt-get install gem`
+- `gem update --system`
+- `gem install bundler`
+- `gem install fast_blank -v '1.0.0' --source 'http://rubygems.org/'`
 - cd `policies`
 - `bundle install`
 

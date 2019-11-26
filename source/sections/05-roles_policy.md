@@ -21,7 +21,7 @@ NashBio has a Security Officer [164.308(a)(2)] and Privacy Officer [164.308(a)(2
 The Privacy Officer is responsible for assisting with compliance and security training for workforce members, assuring the organization remains in compliance with evolving compliance rules, and helping the Security Officer in his responsibilities.
 
 1. Provides annual training to all workforce members of established policies and procedures as necessary and appropriate to carry out their job functions, and documents the training provided.
-2. Assists in the administration and oversight of business associate agreements.
+2. Assists in the administration and oversight of confidentiality agreements.
 3. Manage relationships with customers and partners as those relationships affect security and compliance of ePHI.
 4. Assist Security Officer as needed.
 
