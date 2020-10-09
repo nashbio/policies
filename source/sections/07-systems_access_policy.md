@@ -53,7 +53,7 @@ Access to NashBio systems and applications is limited for all users, including b
    3. If user access is found during review that is not in line with the least privilege principle, the process below is used to modify user access and notify the user of access changes. Once those steps are completed, the Issue is then reviewed again.
    4. Once the review is completed, the Security Officer approves or rejects the Issue. If the Issue is rejected, it goes back for further review and documentation.
    5. If the review is approved, the Security Officer then marks the Issue as Done, adding any pertinent notes required.
-   6. Review of user access is monitored on a quarterly basis using the Quality Management System reporting to assess compliance with above policy.
+   6. Review of user access is monitored on a biannual basis using the Quality Management System reporting to assess compliance with above policy.
 5. Any NashBio workforce member can request change of access using the process outlined in [§7.2 paragraph 1](#7.2-access-establishment-and-modification).
 6. Access to production systems is controlled using centralized user management and authentication.
 7. Temporary accounts are not used unless absolutely necessary for business purposes.
@@ -74,7 +74,7 @@ Access to NashBio systems and applications is limited for all users, including b
 
 ## 7.3 Workforce Clearance
 
-1. The level of security assigned to a user to the organization's information systems is based on the minimum necessary amount of data access required to carry out legitimate job responsibilities assigned to a user's job classification and/or to a user needing access to carry out treatment, payment, or healthcare operations.
+1. The level of security assigned to a user to the organization's information systems is based on the minimum necessary amount of data access required to carry out legitimate job responsibilities assigned to a user's job classification.
 2. All access requests are treated on a "least-access principle."
 3. NashBio maintains a minimum necessary approach to access to sensitive data. As such, NashBio, including all workforce members, does not readily have access to any ePHI.
 
@@ -100,7 +100,7 @@ Access to NashBio systems and applications is limited for all users, including b
 ## 7.7 Automatic Logoff
 
 1. Users are required to make information systems inaccessible by any other individual when unattended by the users (ex. by using a password protected screen saver or logging off the system).
-2. Information systems automatically log users off the systems after 15 minutes of inactivity.
+2. Information systems that access ePHI automatically log users off the systems after 15 minutes of inactivity.
 3. The Security Officer pre-approves exceptions to automatic log off requirements.
 
 ## 7.8 Employee Workstation Use
@@ -124,7 +124,6 @@ All workstations that access sensitive data at NashBio are company owned, and al
 3. When accessing production systems via remote wireless connections, the same system access policies and procedures apply to wireless as all other connections, including wired.
 4. Wireless networks managed within NashBio non-production facilities (offices, etc.) are secured with the following configurations:
    * All data in transit over wireless is encrypted using WPA2 encryption;
-   * Passwords are rotated on a regular basis, presently quarterly. This process is managed by the NashBio Security Officer.
 
 ## 7.10 Employee Termination Procedures
 
@@ -173,8 +172,7 @@ Gsuite admin logging is used to track and store password reset requests. The Sec
 
 1. Employees may not download ePHI to any workstations used to connect to production systems.
 2. Disallowing transfer of ePHI to workstations is enforced through technical measures.
-   * All production access to systems is performed using SSL and Oauth2 authentication and where appropriate through a bastion/jump host accessed through a VPN. Direct access to production systems is disallowed by NashBio's VPN configuration.
-   * On production Linux bastions, all file transfer services are disabled including file-transfer functionality of SSH services (SCP/SFTP).
+   * All production access to systems is performed using SSL and Oauth2 authentication and where appropriate through a bastion/jump host accessed through SSL.
 
 ## 7.14 DaaS Customer Access to Systems
 

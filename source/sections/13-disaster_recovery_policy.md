@@ -50,7 +50,7 @@ Nashbio defines two categories of systems from a disaster recovery perspective.
 The following order of succession to ensure that decision-making authority for the Nashbio Contingency Plan is uninterrupted. The Chief Technology Officer (CTO) is responsible for ensuring the safety of personnel and the execution of procedures documented within this Nashbio Contingency Plan. If the CTO is unable to function as the overall authority or chooses to delegate this responsibility to a successor, the CEO or COO shall function as that authority. To provide contact initiation should the contingency plan need to be initiated, please use the contact list below.
 
 * Jud Schneider, CTO/Security Officer: 615-498-9576, jud@nashvillebiosciences.com
-* Travis Good, CEO/Privacy Officer: 617-899-0939, leeland@nashvillebiosciences.com
+* Leeland Ekstrom, CEO/Privacy Officer: 617-899-0939, leeland@nashvillebiosciences.com
 
 ## 13.3 Responsibilities
 

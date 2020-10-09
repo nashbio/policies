@@ -27,7 +27,7 @@ Nashbio makes every effort to assure all 3rd party organizations are compliant a
    * Changes to 3rd party services are classified as configuration management changes and thus are subject to the policies and procedures described in [§9](#9.-configuration-management-policy); substantial changes to services provided by 3rd parties will invoke a Risk Assessment as described in [§4.2](#4.2-risk-management-policies).
    * Nashbio utilizes monitoring tools to regularly evaluate Subcontractors against relevant SLAs.
 5. No Nashbio Customers or Partners have access outside of their own environment, meaning they cannot access, modify, or delete anything related to other 3rd parties.
-6. Nashbio does not outsource software development.
+6. Nashbio may subcontract software development on systems that do not contain ePHI, but does not subcontract software development on systems that may contain ePHI.  All code is reviewed by the CTO before deployment onto any production system.
 7. Nashbio maintains and annually reviews a list all current Partners and Subcontractors.
    * The list of current Partners and Subcontractors is maintained by the Nashbio Privacy Officer, includes details on all provided services (along with contact information), and is recorded in [§1.4](#1.4-Nashbio-organizational-concepts).
    * The annual review of Partners and Subcontractors is conducted as a part of the security, compliance, and SLA review referenced below.

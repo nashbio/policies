@@ -20,9 +20,9 @@ Nashbio does not act as a covered entity. Nashbio does not operate as a business
 
 ## 1.3 Nashbio Organizational Concepts
 
-The physical infrastructure environment is hosted at [Google Cloud Platform](https://cloud.google.com/) (GCP), [Amazon Web Services](https://aws.amazon.com/) (AWS), and [DCBlox](http://www.dcblox.com/). The network components and supporting network infrastructure are contained within the GCP, AWS, and DCBlox infrastructures and managed by GCP, AWS, and DCBlox (respectively). Nashbio does not have physical access into the network components. The Nashbio environment consists of managed services provided by GCP, AWS, and DCBlox; Python, GO and JavaScript applications; Docker containers; and developer tool servers running on Linux Ubuntu or Linux Debian.
+The physical infrastructure environment is hosted at [Google Cloud Platform](https://cloud.google.com/) (GCP) and [Amazon Web Services](https://aws.amazon.com/) (AWS). The network components and supporting network infrastructure are contained within the GCP and AWS infrastructures and managed by GCP, AWS, and DCBlox (respectively). Nashbio does not have physical access into the network components. The Nashbio environment consists of managed services provided by GCP, AWS, and DCBlox; Python, GO and JavaScript applications; Docker containers; and developer tool servers running on Linux Ubuntu or Linux Debian.
 
-Within the Nashbio Platform on GCP, AWS, and DCBlox all data transmission is encrypted and all hard drives are encrypted so data at rest is also encrypted; this applies to all servers - those hosting Docker containers, databases, APIs, log servers, etc. Nashbio assumes all data *may* contain ePHI, even though our Risk Assessment does not indicate this is the case, and provides appropriate protections based on that assumption.
+Within the Nashbio Platform on GCP and AWS all data transmission is encrypted and all hard drives are encrypted so data at rest is also encrypted; this applies to all servers - those hosting Docker containers, databases, APIs, log servers, etc. Nashbio assumes all data *may* contain ePHI, even though our Risk Assessment does not indicate this is the case, and provides appropriate protections based on that assumption.
 
 In the case of DaaS Customers, it is the responsibility of the Customer to restrict, secure, and assure the privacy of all data at the Application Level, as this is not under the control or purview of Nashbio.
 
@@ -30,7 +30,6 @@ The data and network segmentation mechanism differs depending on the primitives 
 
 * Within GCP, in [BigQuery](https://cloud.google.com/solutions/bigquery-data-warehouse), hosted data is stored within Colossus and distributed across multiple physical disks and replicated across multiple data centers.  In [Cloud Storage](https://cloud.google.com/storage/docs/object-versioning), data blobs are versioned and replicated across mutiple physical disks.  Other services may be utilized which also have redundant configurations.
 * Within AWS, [s3](https://docs.aws.amazon.com/AmazonS3/latest/dev/disaster-recovery-resiliency.html), hosted data is encrypted by default and versioned for redundancy for DaaS Customers.
-* Within DCBlox, data is stored encrypted and redundantly within the data center.
 
 The segmentation strategies employed by Nashbio effectively create RFC 1918, or dedicated, private segmented and separated networks and IP spaces, for each DaaS Customer and for Platform Add-ons.  Where non-manged services are used, dedicated VPC networks are provisioned and used only with specified regions.
 

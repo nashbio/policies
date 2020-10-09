@@ -22,7 +22,7 @@ This policy establishes the scope, objectives, and procedures of NashBio's infor
 2. Risk analysis and risk management are recognized as important components of NashBio's corporate compliance program and information security program in accordance with the Risk Analysis and Risk Management implementation specifications within the Security Management standard and the evaluation standards set forth in the HIPAA Security Rule, 45 CFR 164.308(a)(1)(ii)(A), 164.308(a)(1)(ii)(B), 164.308(a)(1)(i), and 164.308(a)(8).
    1. Risk assessments are done throughout product life cycles;
    2. Before the integration of new system technologies and before changes are made to NashBio physical safeguards; and
-      * These changes do not include routine updates to existing systems, deployments of new systems created based on previously configured systems, deployments of new Customers, or new code developed for operations and management of the NashBio Platform.
+      * These changes do not include routine updates to existing systems, deployments of new systems created based on previously configured systems, or deployments of new Customers.
    3. While making changes to NashBio physical equipment and facilities that introduce new, untested configurations.
    4. NashBio performs periodic technical and non-technical assessments of the security rule requirements as well as in response to environmental or operational changes affecting the security of ePHI.
 3. NashBio implements security measures sufficient to reduce risks and vulnerabilities to a reasonable and appropriate level to:
@@ -49,7 +49,7 @@ This policy establishes the scope, objectives, and procedures of NashBio's infor
 The intent of completing a risk assessment is to determine potential threats and vulnerabilities and the likelihood and impact should they occur. The output of this process helps to identify appropriate controls for reducing or eliminating risk.
 
 * Step 1. System Characterization
-  * The first step in assessing risk is to define the scope of the effort. To do this, identify where ePHI is received, maintained, processed, or transmitted. Using information-gathering techniques, the NashBio Platform boundaries are identified.
+  * The first step in assessing risk is to define the scope of the effort. To do this, identify all system boundaries, noting where ePHI might be received, maintained, processed, or transmitted. Using information-gathering techniques, the NashBio Platform boundaries are identified.
   * Output - Characterization of the NashBio Platform system assessed, a good picture of the Platform environment, and delineation of Platform boundaries.
 
 * Step 2. Threat Identification
@@ -109,15 +109,7 @@ Risk mitigation involves prioritizing, evaluating, and implementing the appropri
   * Output - List of resources, responsible persons and their assignments
 
 * Step 6. Develop Safeguard Implementation Plan
-  * Develop an overall implementation or action plan and individual project plans needed to implement the safeguards and controls identified. The Implementation Plan should contain the following information:
-    * Each risk or vulnerability/threat pair and risk level;
-    * Prioritized actions;
-    * The recommended feasible control(s) for each identified risk;
-    * Required resources for implementation of selected controls;
-    * Team member responsible for implementation of each control;
-    * Start date for implementation;
-    * Target date for completion of implementation;
-    * Maintenance requirements.
+  * Develop an overall implementation or action plan and individual project plans needed to implement the safeguards and controls identified. 
   * The overall implementation plan provides a broad overview of the safeguard implementation, identifying important milestones and timeframes, resource requirements (staff and other individuals' time, budget, etc.), interrelationships between projects, and any other relevant information. Regular status reporting of the plan, along with key metrics and success indicators should be reported to NashBio Senior Management.
   * Individual project plans for safeguard implementation may be developed and contain detailed steps that assigned resources carry out to meet implementation timeframes and expectations. Additionally, consider including items in individual project plans such as a project scope, a list deliverables, key assumptions, objectives, task completion dates and project requirements.
   * Output - Safeguard Implementation Plan
@@ -134,7 +126,7 @@ Risk mitigation involves prioritizing, evaluating, and implementing the appropri
 The two principle components of the risk management process - risk assessment and risk mitigation - will be carried out according to the following schedule to ensure the continued adequacy and continuous improvement of NashBio's information security program:
 
 * Scheduled Basis - an overall risk assessment of NashBio's information system infrastructure will be conducted annually. The assessment process should be completed in a timely fashion so that risk mitigation strategies can be determined and included in the corporate budgeting process.
-* Throughout a System's Development Life Cycle - from the time that a need for a new, untested information system configuration and/or application, and/or pon the initiation of major system architectural change is identified through the time it is disposed of, ongoing assessments of the potential threats to a system and its vulnerabilities should be undertaken as a part of the maintenance of the system.
+* Throughout a System's Development Life Cycle - from the time that a need for a new, untested information system configuration and/or application, and/or upon the initiation of major system architectural change is identified through the time it is disposed of, ongoing assessments of the potential threats to a system and its vulnerabilities should be undertaken as a part of the maintenance of the system.
 * As Needed - the Security Officer (or other designated employee) or Risk Management Team may call for a full or partial risk assessment in response to changes in business strategies, information technology, information sensitivity, threats, legal liabilities, or other significant factors that affect NashBio's Platform.
 
 ## 4.4 Process Documentation

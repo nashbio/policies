@@ -47,28 +47,26 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
    * System: System level audit trails generally monitor and log user activities, applications accessed, and other system defined specific actions. 
    * Network: Network level audit trails generally monitor information on what is operating, penetrations, and vulnerabilities.
 3. NashBio shall log all incoming and outgoing traffic to into and out of its environment. This includes all successful and failed attempts at data access and editing. Data associated with this data will include origin, destination, time, and other relevant details that are available to NashBio.
-4. NashBio utilizes Cavirin to scan all systems for malicious and unauthorized software every week and at reboot of systems.
+4. NashBio utilizes Cavirin to scan all systems for misconfiguration and uses Security Command Center to monitor for malicious or unauthorized access.
 5. NashBio leverages process monitoring tools throughout its environment.
-6. NashBio treats its Dashboard as a Platform Add-on and, as such, it logs all activity associated with Dashboard Access.
-7. NashBio uses Stackdriver to monitor the integrity of log files by utilizing Stackdriver System Integrity Checking capabilities.
-8. NashBio shall identify "trigger events" or criteria that raise awareness of questionable conditions of viewing of confidential information. The "events" may be applied to the entire NashBio Platform or may be specific to a Customer, partner, business associate, or application (See Listing of Potential Trigger Events below).
-9. In addition to trigger events, NashBio utilizes Stackdriver and Cavirin log correlation functionality to proactively identify and enable alerts based on log data.
-10. Logs are reviewed monthly by the Security Officer.
-11. NashBio's Security Officer and Privacy Officer are authorized to select and use auditing tools that are designed to detect network vulnerabilities and intrusions. Such tools are explicitly prohibited by others, including Customers and Partners, without the explicit authorization of the Security Officer. These tools may include, but are not limited to:
+6. NashBio uses Stackdriver to monitor the integrity of log files by utilizing Stackdriver System Integrity Checking capabilities.
+7. NashBio shall identify "trigger events" or criteria that raise awareness of questionable conditions of viewing of confidential information. The "events" may be applied to the entire NashBio Platform or may be specific to a Customer, partner, business associate, or application (See Listing of Potential Trigger Events below).
+8. Logs are reviewed monthly by the Security Officer.
+9. NashBio's Security Officer and Privacy Officer are authorized to select and use auditing tools that are designed to detect network vulnerabilities and intrusions. Such tools are explicitly prohibited by others, including Customers and Partners, without the explicit authorization of the Security Officer. These tools may include, but are not limited to:
     * Scanning tools and devices;
     * Password cracking utilities;
     * Network "sniffers."
     * Passive and active intrusion detection systems.
-12. The process for review of audit logs, trails, and reports shall include:
+10. The process for review of audit logs, trails, and reports shall include:
     * Description of the activity as well as rationale for performing the audit.
     * Identification of which NashBio workforce members will be responsible for review (workforce members shall not review audit logs that pertain to their own system activity).
     * Frequency of the auditing process.
     * Determination of significant events requiring further review and follow-up.
     * Identification of appropriate reporting channels for audit results and required follow-up.
-13. Vulnerability testing software may be used to probe the network to identify what is running (e.g., operating system or product versions in place), whether publicly-known vulnerabilities have been corrected, and evaluate whether the system can withstand attacks aimed at circumventing security controls.
+11. Vulnerability testing software may be used to probe the network to identify what is running (e.g., operating system or product versions in place), whether publicly-known vulnerabilities have been corrected, and evaluate whether the system can withstand attacks aimed at circumventing security controls.
     * Testing may be carried out internally or provided through an external third-party vendor. Whenever possible, a third party auditing vendor should not be providing the organization IT oversight services (e.g., vendors providing IT services should not be auditing their own services - separation of duties).
-    * Testing shall be done on a routine basis, currently weekly via Cavirin.
-14. Software patches and updates will be applied to all systems in a timely manner.
+    * Testing shall be done on a continuous basis by Cloud Security Command Center.
+12. Software patches and updates will be applied to all systems in a timely manner.
 
 ## 8.3 Audit Requests
 
@@ -111,7 +109,6 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
 ## 8.7 Workforce Training, Education, Awareness and Responsibilities
 
 1. NashBio workforce members are provided training, education, and awareness on safeguarding the privacy and security of business and ePHI. NashBio's commitment to auditing access and activity of the information applications, systems, and networks is communicated through new employee orientation, ongoing training opportunities and events, and applicable policies. NashBio workforce members are made aware of responsibilities with regard to privacy and security of information as well as applicable sanctions/corrective disciplinary actions should the auditing process detect a workforce member's failure to comply with organizational policies.
-2. NashBio Customers are provided with necessary information to understand NashBio auditing capabilities, and PaaS Customers can choose the level of logging and auditing that NashBio will implement on their behalf.
 
 ## 8.8 External Audits of Information Access and Activity
 

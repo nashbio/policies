@@ -37,7 +37,7 @@ The current NashBio Privacy Officer is Leeland Ekstrom ([leeland@nashvillebiosci
 2. The Security Officer or designee maintains documentation of the training session materials and attendees for a minimum of six years.
 3. The training session focuses on, but is not limited to, the following subjects defined in NashBio's security policies and procedures:
    1. HIPAA Privacy, Security, and Breach notification rules;
-   2. HITRUST Common Security Framework;
+   2. CITI Training;
    3. NIST Security Rules;
    4. Risk Management procedures and documentation;
    5. Auditing - NashBio may monitor access and activities of all users;
@@ -54,11 +54,10 @@ The current NashBio Privacy Officer is Leeland Ekstrom ([leeland@nashvillebiosci
    16. Users must set all applications that contain or transmit ePHI to automatically log off after 15 minutes of inactivity;
    17. Supervisors are required to report terminations of workforce members and other outside users;
    18. Supervisors are required to report a change in a user's title, role, department, and/or location;
-   19. Procedures to backup ePHI;
-   20. Procedures to move and record movement of hardware and electronic media containing ePHI;
-   21. Procedures to dispose of discs, CDs, hard drives, and other media containing ePHI;
-   22. Procedures to re-use electronic media containing ePHI;
-   23. SSH key and sensitive document encryption procedures.
+   19. Procedures to move and record movement of hardware and electronic media containing ePHI;
+   20. Procedures to dispose of discs, CDs, hard drives, and other media containing ePHI;
+   21. Procedures to re-use electronic media containing ePHI;
+   22. SSH key and sensitive document encryption procedures.
 
 ## 5.3 Security Officer
 

@@ -1,6 +1,6 @@
 # 9. Configuration Management Policy
 
-NashBio standardizes and automates configuration management through the use of Chef/Salt scripts as well as documentation of all changes to production systems and networks. Chef and Salt automatically configure all NashBio systems according to established and tested policies, and are used as part of our Disaster Recovery plan and process.
+NashBio standardizes and automates configuration management through the use of scripts as well as documentation of all changes to production systems and networks. The data-pipes repositiory contains scripts that configure all NashBio systems according to established and tested policies, and are used as part of our Disaster Recovery plan and process.  The CTO is responsible for configuring all systems.
 
 ## 9.1 Applicable Standards
 
@@ -41,41 +41,25 @@ NashBio standardizes and automates configuration management through the use of C
    * Quality Management System access requires authenticated users.
    * The CTO grants access to the Quality Management System following the procedures covered in the [Access Establishment and Modification section](#7.2-access-establishment-and-modification).
 2. The CTO, or an authorized delegate of the CTO, must approve the provisioning request before any new system can be provisioned.
-3. Once provisioning has been approved, the ops team member must configure the new system according to the standard baseline chosen for the system's role.
-   * For Linux systems, this means adding the appropriate grains to the Salt configuration file and running a `highstate` operation.
+3. Once provisioning has been approved, the ops team member must configure the new system according to the standard baseline chosen for the system's role, and according to the requisite SOP.
+   * For some systems, this requires altering the configuration files to suit the customers specific deployment needs.  All logs of this activity are stored in github.
 4. If the system will be used to house production data (ePHI), the ops team member must add an encrypted block data volume to the VM during provisioning.
-   * For systems on AWS, the ops team member must add an encrypted Elastic Block Storage (EBS) volume.
-   * For systems on other cloud providers, the ops team member must add a block data volume and set up OS-level data encryption using Salt or Chef.
-5. Once the system has been provisioned, the ops team member must contact the security team to inspect the new system. A member of the security team will verify that the secure baseline has been applied to the new system, including (but not limited to) verifying the following items:
-   * Removal of default users used during provisioning.
-   * Network configuration for system.
-   * Data volume encryption settings.
-   * Intrusion detection and virus scanning software installed.
-   * All items listed below in the operating system-specific subsections below.
-6. Once the security team member has verified the new system is correctly configured, the team member must add that system to the Nessus security scanner configuration.
-7. The new system may be rotated into production once the CTO verifies all the provisioning steps listed above have been correctly followed and has marked the Issue with the `Approved` state.
+   * For systems on cloud providers, the ops team member must add a block data volume and set up OS-level data encryption.
+5. The new system may be rotated into production once the CTO verifies all the provisioning steps listed above have been correctly followed.
 
 ### 9.3.1 Provisioning Linux Systems
 
-1. Linux systems have their baseline security configuration applied via Salt states. These baseline Salt states cover:
+1. Linux systems have their baseline security configuration applied which cover:
    * Ensuring that the machine is up-to-date with security patches and is configured to apply patches in accordance with our policies.
    * Stopping and disabling any unnecessary OS services.
-   * Installing and configuring the OSSEC IDS agent.
-   * Configuring 15-minute session inactivity timeouts.
-   * Installing and configuring the ClamAV virus scanner.
-   * Installing and configuring the NTP daemon, including ensuring that modifying system time cannot be performed by unprivileged users.
-   * Configuring LUKS volumes for providers that do not have native support for encrypted data volumes, including ensuring that encryption keys are protected from unauthorized access.
-   * Configuring authentication to the centralized LDAP servers.
    * Configuring audit logging as described in the [Auditing Policy section](#8.-auditing-policy).
-2. Any additional Salt states applied to the Linux system must be clearly documented by the ops team member in the DT request by specifying the purpose of the new system.
+2. Any additional configurations applied to the Linux system must be clearly documented by the ops team member in the DT request by specifying the purpose of the new system.
 
 ### 9.3.3 Provisioning Management Systems
 
-1. Provisioning management systems such as Salt servers, LDAP servers, or VPN appliances follows the same procedure as provisioning a production system.
-2. Provisioning the first Salt server for a production pod requires bootstrapping Salt. An authorized member of the Dev Ops team will oversee provisioning a new Salt server.
-   * Once the Salt server has been bootstrapped, the ops team member will apply the baseline configuration to the Salt server by performing a `highstate` operation as usual.
-3. Critical infrastructure services such as logging, monitoring, LDAP servers, or Windows Domain Controllers must be configured with appropriate Salt states.
-   * These Salt states have been approved by the CTO, or an authorized delegate of the CTO, to be in accordance with all NashBio policies, including setting appropriate:
+1. Provisioning management systems follows the same procedure as provisioning a production system.
+2. Critical infrastructure services such as logging or monitoring servers must be configured by the CTO.
+   * These configurations have been approved by the CTO, or an authorized delegate of the CTO, to be in accordance with all NashBio policies, including setting appropriate:
      * Audit logging requirements.
      * Password size, strength, and expiration requirements.
      * Transmission encryption requirements.
@@ -85,25 +69,18 @@ NashBio standardizes and automates configuration management through the use of C
 ## 9.4 Changing Existing Systems
 
 1. Subsequent changes to already-provisioned systems are unconditionally handled by one of the following methods:
-   * Changes to Salt states or pillar values.
-   * Changes to Chef recipes.
-   * For configuration changes that cannot be handled by Chef or Salt, a runbook describing exactly what changes will be made and by whom.
-2. Configuration changes to Chef recipes or Salt states must be initiated by creating a Merge Request in GitHub.
-   * The ops team member will create a feature branch and make their changes on that branch.
-   * The ops team member must test their configuration change locally when possible, or on a development and/or staging sandbox otherwise.
-   * At least one other ops team member must review the Chef or Salt change before merging the change into the main branch.
-3. In all cases, before rolling out the change to production, the ops team member must file an Issue in the DT project describing the change. This Issue must link to the reviewed Merge Request and/or include a link to the runbook.
+   * Changes logged in github under the data-pipes repository.
+2. In all cases, before rolling out the change to production, the ops team member must file an Issue in the data-pipes project describing the change. 
 4. Once the request has been approved by the CTO, the ops team member may roll out the change into production environments.
 
 ## 9.5 Patch Management Procedures
 
 1. NashBio uses automated tooling to ensure systems are up-to-date with the latest security patches.
-2. On Ubuntu Linux systems, the unattended-upgrades tool is used to apply security patches in phases.
+2. On Ubuntu or Debian Linux systems, the unattended-upgrades tool is used to apply security patches in phases.
    * The security team maintains a mirrored snapshot of security patches from the upstream OS vendor. This mirror is synchronized bi-weekly and applied to development systems nightly.
    * If the development systems function properly after the two-week testing period, the security team will promote that snapshot into the mirror used by all staging systems. These patches will be applied to all staging systems during the next nightly patch run.
    * If the staging systems function properly after the two-week testing period, the security team will promote that snapshot into the mirror used by all production systems. These patches will be applied to all production systems during the next nightly patch run.
    * Patches for critical kernel security vulnerabilities may be applied to production systems using hot-patching tools at the discretion of the Security Officer. These patches must follow the same phased testing process used for non-kernel security patches; this process may be expedited for severe vulnerabilities.
-3. On Windows systems, the baseline Group Policy setting configures Windows Update to implement the patching policy.
 
 ## 9.6 Software Development Procedures
 

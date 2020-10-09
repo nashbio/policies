@@ -39,7 +39,7 @@ Production systems that create, receive, store, or transmit Customer data (herea
 
 ## 17.6 Intrusion Detection and Vulnerability Scanning
 
-1. Production systems are monitored using Cavirin. Suspicious activity is logged and alerts are generated.
+1. Production systems are monitored using Stackdriver or Security Command Center. Suspicious activity is logged and alerts are generated.
 2. Vulnerability scanning of Production Systems must occur on a predetermined, regular basis, no less than annually. Currently it is weekly. Scans are reviewed by Security Officer, with defined steps for risk mitigation, and retained for future reference.
 
 ## 17.7 Production System Security
