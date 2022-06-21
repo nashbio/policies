@@ -1,12 +1,12 @@
 # 1. Introduction
 
-Nashville Biosciences, LLC ("Nashbio") is committed to ensuring the confidentiality, privacy, integrity, and availability of all electronic protected health information (ePHI) it receives, maintains, processes and/or transmits on behalf of its Customers. As providers of compliant, hosted infrastructure used by health technology vendors, developers, designers, agencies, custom development shops, and enterprises, Nashbio strives to maintain compliance, proactively address information security, mitigate risk for its Customers, and assure known breaches are completely and effectively communicated in a timely manner. The following documents address core policies used by Nashbio to maintain compliance and assure the proper protections of infrastructure used to store, process, and transmit ePHI for Nashbio Customers.
+Nashville Biosciences, LLC ("Nashbio") is committed to ensuring the confidentiality, privacy, integrity, and availability of all electronic protected health information (ePHI) it receives, maintains, processes and/or transmits on behalf of its Customers. As providers of compliant, hosted infrastructure used by health technology vendors, developers, designers, agencies, custom development shops, and enterprises, Nashbio strives to maintain compliance, proactively address information security, mitigate risk for its Customers, and assure the proper protections of infrastructure used to store, process, and transmit ePHI for Nashbio Customers.
 
 Nashbio provides secure and compliant hosted de-identified data for research and development. This hosted data falls into two broad categories: 1) **De-identified Research Extracts** 2) **Data as a Service (DaaS)**. These Categories are cited throughout policies as Customers in each category inherit different policies, procedures, and obligations from Nashbio.
 
 ## 1.1 Data as a Service (DaaS)
 
-DaaS Customers utilize hosted data infrastructure from Nashbio to deploy, host, and scale custom developed applications that utilize Nashbio configured databases and datasets. These customers are deployed into compliant infrastructure managed by Nashbio. Nashbio does not have insight or access into application level data of DaaS Customers and, as such, does not have the ability to secure or manage risk associated with application level vulnerabilities and security weaknesses. Nashbio makes every effort to reduce the risk of unauthorized disclosure, access, and/or breach of DaaS Customer data through network (firewalls, dedicated IP spaces, etc) and server settings (encryption at rest and in transit, etc).
+DaaS Customers utilize hosted data infrastructure from Nashbio to deploy, host, and scale custom developed applications that utilize Nashbio configured databases and datasets. These customers are deployed into compliant infrastructure managed by Nashbio. Nashbio does not have insight or access into application level data of DaaS Customers and, as such, does not have the ability to secure or manage risk associated with application level vulnerabilities and security weaknesses. Nashbio makes every effort to reduce the risk of unauthorized disclosure, access, and/or breach of DaaS Customer data through network (firewalls, dedicated IP spaces, etc) and server settings (encryption at rest and in transit, etc)(§4).
 
 ## 1.2 Compliance Inheritance
 
@@ -14,13 +14,13 @@ Nashbio provides compliant infrastructure, data assets owned by VUMC and other c
 
 **FUTURE** Nashbio has been through a HIPAA compliance audit by a national third-party compliance firm to validate and map organizational policies and technical controls to HIPAA rules. 
 
-Nashbio does not sign business associate agreements (BAAs) with its Customers as it does not explicitly deal with PHI. 
+Nashbio does sign business associate agreements (BAAs) with its Customers as it does deal with PHI, only with context of de-identifiable data. 
 
-Nashbio does not act as a covered entity. Nashbio does not operate as a business associate (not a subcontractor), and Nashbio does not interface with users to obtain or provide access to ePHI. 
+Nashbio does not act as a covered entity. Nashbio does operate as a business associate (subcontractor), and Nashbio does not interface with users to obtain or provide access to ePHI. 
 
 ## 1.3 Nashbio Organizational Concepts
 
-The physical infrastructure environment is hosted at [Google Cloud Platform](https://cloud.google.com/) (GCP) and [Amazon Web Services](https://aws.amazon.com/) (AWS). The network components and supporting network infrastructure are contained within the GCP and AWS infrastructures and managed by GCP, AWS, and DCBlox (respectively). Nashbio does not have physical access into the network components. The Nashbio environment consists of managed services provided by GCP, AWS, and DCBlox; Python, GO and JavaScript applications; Docker containers; and developer tool servers running on Linux Ubuntu or Linux Debian.
+The physical infrastructure environment is hosted at [Google Cloud Platform](https://cloud.google.com/) (GCP) and [Amazon Web Services](https://aws.amazon.com/) (AWS). The network components and supporting network infrastructure are contained within the GCP and AWS infrastructures and managed by GCP, AWS(respectively). Nashbio does not have physical access into the network components. The Nashbio environment consists of managed services provided by GCP, AWS; Python, GO and JavaScript applications; Docker containers; and developer tool servers running on Linux Ubuntu or Linux Debian.
 
 Within the Nashbio Platform on GCP and AWS all data transmission is encrypted and all hard drives are encrypted so data at rest is also encrypted; this applies to all servers - those hosting Docker containers, databases, APIs, log servers, etc. Nashbio assumes all data *may* contain ePHI, even though our Risk Assessment does not indicate this is the case, and provides appropriate protections based on that assumption.
 
@@ -37,7 +37,7 @@ All production (non-managed services) are configured by Nashbio for redundancy a
 
 ## 1.4 Requesting Audit and Compliance Reports
 
-Nashbio, at its sole discretion, shares audit reports and Corrective Action Plans (CAPs), with customers on a case by case basis. All audit reports are shared under explicit NDA in Nashbio format between Nashbio and party to receive materials. Audit reports can be requested by Nashbio workforce members for Customers or directly by Nashbio Customers.
+Nashbio, at its sole discretion, shares audit reports and Corrective Action Plans (CAPs), with customers on a case by case basis. All audit reports are shared under explicit NDA in Nashbio format between Nashbio and party to receive materials(§8). Audit reports can be requested by Nashbio workforce members for Customers or directly by Nashbio Customers.
 
 The following process is used to request audit reports:
 

@@ -29,6 +29,10 @@ Also of note, all physical office locations of Nashbio are designated as remote 
 3. Fire extinguishers and detectors are installed according to applicable laws and regulations.
 4. Maintenance is controlled and conducted by authorized personnel in accordance with supplier-recommended intervals, insurance policies and the organization's maintenance program.
 5. Electronic and physical media containing covered information is securely destroyed (or the information securely removed) prior to disposal.
+   * written, physical, labels, films, electronic devices, and anything holding ePHI must be unrecoverable when disposed of.
+   * Destroy or store hard drives with ePHI.
+   * Recycle electronic devices after ePHI disposal.
+   * Create tracking documents for all NashBio electronic devices.
 6. The organization securely disposes media with sensitive information.
 7. Physical access is restricted using locks.
    * Restricted areas and facilities are locked when unattended (where feasible).

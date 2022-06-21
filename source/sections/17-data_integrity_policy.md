@@ -36,6 +36,7 @@ Production systems that create, receive, store, or transmit Customer data (herea
 1. Software patches and updates will be applied to all systems in a timely manner. In the case of routine updates, they will be applied after thorough testing. In the case of updates to correct known vulnerabilities, priority will be given to testing to speed the time to production. Critical security patches are applied within 30 days from testing and all security patches are applied within 90 days after testing.
     * In the case of DaaS Customers, updates to Application and Database versions are the responsibility of Customers, though Nashbio will, at its own discretion, notify and recommend updates to Customer systems.
 2. Administrators subscribe to mailing lists to ensure that they are using current versions of all Nashbio-managed software on Production Systems.
+3. NashBio uses managed services where it can. Patch Management is performed by Google.
 
 ## 17.6 Intrusion Detection and Vulnerability Scanning
 

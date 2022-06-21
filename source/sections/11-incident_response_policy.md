@@ -48,6 +48,7 @@ NashBio's incident response classifies security-related events into the followin
   * Unauthorized change or destruction of ePHI.
   * A data breach accomplished by an internal or external entity.
   * A Denial-of-Service (DoS) attack causing a critical service to become unreachable.
+  * Applies to RHI and HIE as well.
 
 NashBio employees must report any unauthorized or suspicious activity seen on production systems or associated with related communication systems (such as email or Slack). In practice this means keeping an eye out for security events, and letting the Security Officer know about any observed precursors or indications as soon as they are discovered.
 
@@ -65,7 +66,7 @@ NashBio employees must report any unauthorized or suspicious activity seen on pr
    1. If the issue is an event, indication, or precursor the Security Officer forwards it to the appropriate resource for resolution.
       1. Non-Technical Event (minor infringement): the Security Officer completes a [SIR Form](sections/sir-form.doc) and investigates the incident.
       2. Technical Event: Assign the issue to an IT resource for resolution. This resource may also be a contractor or outsourced technical resource, in the event of a small office or lack of expertise in the area.
-   2. If the issue is a security incident the Security Officer activates the Security Incident Response Team (SIRT) and notifies senior management.
+   2. If the issue is a security incident the Security Officer activates the Security Incident Response Team (SIRT) and notifies senior management, then begins a SIR form.
        1. If a non-technical security incident is discovered the SIRT completes the investigation, implements preventative measures, and resolves the security incident.
        2. Once the investigation is completed, progress to Phase V, Follow-up.
        3. If the issue is a technical security incident, commence to Phase II: Containment.
@@ -149,3 +150,4 @@ Current members of the NashBio SIRT:
 
 * Security Officer
 * Privacy Officer
+* Senior Engineer

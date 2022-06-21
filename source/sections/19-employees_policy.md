@@ -27,21 +27,20 @@ Nashbio is committed to ensuring all workforce members actively address security
 3. The Nashbio Employee Handbook clearly states the responsibilities and acceptable behavior regarding information system usage, including rules for email, Internet, mobile devices, and social media usage.
    * Workforce members are required to sign an agreement stating that they have read and will abide by all terms outlined in the Nashbio Employee Handbook, along with all policies and processes described in this document.
    * A Human Resources representative will provide the agreement to new employees during their onboarding process.
-4. Nashbio does not allow mobile devices to connect to any of its production networks.
-5. All workforce members are educated about the approved set of tools to be installed on workstations.
-6. All new workforce members are given HIPAA training within 30 days of beginning employment. Training includes HIPAA reporting requirements, including the ability to anonymously report security incidents, and the levels of compliance and obligations for Nashbio and its Customers and Partners.
+4. All workforce members are educated about the approved set of tools to be installed on workstations.
+5. All new workforce members are given HIPAA training within 30 days of beginning employment. Training includes HIPAA reporting requirements, including the ability to anonymously report security incidents, and the levels of compliance and obligations for Nashbio and its Customers and Partners.
    * Current Nashbio training is hosted at [training.Nashbio.com](https://training.Nashbio.com/).
-7. All remote (teleworking) workforce members are trained on the risks, the controls implemented, their responsibilities, and sanctions associated with violation of policies. Additionally, remote security is maintained through the use of VPN tunnels for all access to production systems with access to ePHI data.
-9. Employees may only use Nashbio-purchased and -owned workstations for accessing production systems with access to ePHI data.
+6. All remote (teleworking) workforce members are trained on the risks, the controls implemented, their responsibilities, and sanctions associated with violation of policies. Additionally, remote security is maintained through the use of for all access to production systems with access to ePHI data, through https and Identity. 
+7. Employees may only use Nashbio-purchased and -owned and VUMC property workstations for accessing production systems with access to ePHI data.
    * Any workstations used to access production systems must use a physical security key as authentication and accessed via a nashbio-managed docker container running locally on a workstation to be configured as prescribed in [§7.8](#7.8-employee-workstation-use).
    * Any workstations used to access production systems must have virus protection software installed, configured, and enabled.
    * Nashbio may monitor access and activities of all users on workstations and production systems in order to meet auditing policy requirements ([§8](#8.-auditing-policy)).
-10. Access to internal Nashbio systems can be requested using the procedures outlined in [§7.2](#7.2-access-establishment-and-modification). All requests for access must be granted by the Nashbio Security Officer.
-11. Request for modifications of access for any Nashbio employee can be made using the procedures outlined in [§7.2](#7.2-access-establishment-and-modification).
-12. Nashbio employees are strictly forbidden from downloading any ePHI to their workstations.
+8. Access to internal Nashbio systems can be requested using the procedures outlined in [§7.2](#7.2-access-establishment-and-modification). All requests for access must be granted by the Nashbio Security Officer.
+9. Request for modifications of access for any Nashbio employee can be made using the procedures outlined in [§7.2](#7.2-access-establishment-and-modification).
+10. Nashbio employees are strictly forbidden from downloading any ePHI to their workstations.
     * Restricting transfers of ePHI is enforced through technical controls as described in [§7.13](#7.13-access-to-ephi).
     * Employees found to be in violation of this policy will be subject to sanctions as described in [§5.3.3](#5.3-security-officer).
-13. Employees are required to cooperate with federal and state investigations.
+11. Employees are required to cooperate with federal and state investigations.
     * Employees must not interfere with investigations through willful misrepresentation, omission of facts, or by the use of threats against any person.
     * Employees found to be in violation of this policy will be subject to sanctions as described in [§5.3.3](#5.3-security-officer).
 
