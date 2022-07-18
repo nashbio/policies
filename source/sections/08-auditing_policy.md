@@ -57,7 +57,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
 4. NashBio utilizes Cavirin to scan all systems for misconfiguration and uses Security Command Center to monitor for malicious or unauthorized access.
 5. NashBio shall identify "trigger events"(§8.10) or criteria that raise awareness of questionable conditions of viewing of confidential information. The "events" may be applied to the entire NashBio Platform or may be specific to a Customer, partner, business associate, or application (See Listing of Potential Trigger Events below).
    * Trigger events will trigger event logs(§8.10).
-6. Logs are reviewed quarterly by the Security Officer.
+6. Logs are reviewed annualy by the Security Officer.
 7. NashBio's Security Officer and Privacy Officer are authorized to select and use auditing tools that are designed to detect network vulnerabilities and intrusions. Such tools are explicitly prohibited by others, including Customers and Partners, without the explicit authorization of the Security Officer. These tools may include, but are not limited to:
     * Scanning tools and devices;
     * Password cracking utilities;
@@ -65,7 +65,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
     * Passive and active intrusion detection systems.
 8. The process for review of audit logs, trails, and reports shall include:
     * Description of the activity as well as rationale for performing the audit.
-    * Identification of which NashBio workforce members will be responsible for review (workforce members shall not review audit logs that pertain to their own system activity).
+    * Identification of which NashBio workforce members will be responsible for review.
     * Frequency of the auditing process.
     * Determination of significant events requiring further review and follow-up.
     * Identification of appropriate reporting channels for audit results and required follow-up.
@@ -87,7 +87,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
 2. A request for an audit for specific cause must include time frame, frequency, and nature of the request. The request must be reviewed and approved by NashBio's Privacy or Security Officer.
 3. A request for an audit must be approved by NashBio's Privacy Officer and/or Security Officer before proceeding. Under no circumstances shall detailed audit information be shared with parties without proper permissions and access to see such data.
    * Should the audit disclose that a workforce member has accessed ePHI inappropriately, the minimum necessary/least privileged information shall be shared with NashBio's Security Officer to determine appropriate sanction/corrective disciplinary action.
-   * Only de-identified information shall be shared with Customer or Partner regarding the results of the investigative audit process. This information will be communicated to the appropriate personnel by NashBio's Privacy Officer or designee. Prior to communicating with customers and partners regarding an audit, it is recommended that NashBio consider seeking risk management and/or legal counsel.
+   * Only de-identified information shall be shared with Customer or Partner regarding the results of the investigative audit process. This information will be communicated to the appropriate personnel by NashBio's Privacy Officer or designee. 
 
 ## 8.4 Review and Reporting of Audit Findings
 

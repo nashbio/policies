@@ -19,14 +19,10 @@ NashBio standardizes and automates configuration management through the use of s
 3. All changes to production systems, network devices, and firewalls are approved by the NashBio CTO before they are implemented to assure they comply with business and security requirements.
 4. All changes to production systems are tested before they are implemented in production.
 5. Implementation of approved changes are only performed by authorized personnel.
-6. Tooling to generate an up-to-date inventory of systems, including corresponding architecture diagrams for related products and services, is hosted on GitHub.
-   * All systems are categorized as production and utility to differentiate based on criticality.
-   * The CTO maintains scripts to generate inventory lists on demand using APIs provided by each cloud provider.
-   * These scripts are used to generate the diagrams and asset lists required by the Risk Assessment phase of NashBio's Risk Management procedures ([§4.3.1](#4.3-risk-management-procedures)).
-   * After every use of these scripts, the Security Officer will verify their accuracy by reconciling their output with recent changes to production systems. The Security Officer will address any discrepancies immediately with changes to the scripts.
+6. Tooling to generate an up-to-date inventory of systems, including corresponding architecture diagrams for related products and services, is maintianed by the CTO.
 7. All frontend functionality (developer dashboards and portals) is separated from backend (database and app servers) systems by being deployed on separate servers or containers.
 8. All committed code is reviewed using pull requests to assure software code quality and proactively detect potential security issues in development.
-9. NashBio utilizes development and staging environments that mirror production to assure proper function.
+9. NashBio utilizes development and testing environments that mirror production to assure proper function.
 10. Linux-based systems use a Debian or Centos base image that has been reviewed and improved based on the results of subsequent vulnerability scans and risk assessments.
 
 ## Below needs to be reviewed and updated with current production automation requirements
@@ -38,7 +34,7 @@ NashBio standardizes and automates configuration management through the use of s
 3. Once provisioning has been approved, the ops team member must configure the new system according to the standard baseline chosen for the system's role, and according to the requisite SOP.
    * For some systems, this requires altering the configuration files to suit the customers specific deployment needs.  All logs of this activity are stored in Github.
 4. If the system will be used to house ePHI, the ops team member must add an encrypted block data volume to the VM during provisioning.
-   * For systems on cloud providers, the ops team member must add a block data volume and set up OS-level data encryption.
+   * For systems on cloud providers, the ops team member must add a block data volume and set up OS-level data encryption, if VMs are used.
 5. The new system may be rotated into production once the CTO verifies all the provisioning steps listed above have been correctly followed.
 
 ### 9.3.1 Provisioning Linux Systems
@@ -46,7 +42,7 @@ NashBio standardizes and automates configuration management through the use of s
 1. Linux systems have their baseline security configuration applied which cover:
    * Ensuring that the machine is up-to-date with security patches and is configured to apply patches in accordance with NashBio policies.
    * Stopping and disabling any unnecessary OS services.
-   * Configuring Identity Aware Proxy.
+   * Configuring Identity Aware Proxy for access.
 
 ### 9.3.3 Provisioning Management Systems
 
@@ -57,12 +53,12 @@ NashBio standardizes and automates configuration management through the use of s
      * Password size, strength, and expiration requirements.
      * Transmission encryption requirements.
 
-## 9.4 Change Management policy
+## 9.4 Change Management Policy
 
 1. Subsequent changes to already-provisioned systems are unconditionally handled by one of the following methods:
    * Changes logged in Github under the data-pipes repository, or other repositories.
 2. In all cases, before rolling out the change to production, the developer must file a pull request in the data-pipes project describing the change. 
-4. Once the request has been approved by the CTO, the ops team member may roll out the change into production environments.
+4. Once the request has been approved by the CTO, the ops team member may roll out the change into production environments according to SOPs.
 
 ## 9.5 Patch Management Procedures
 

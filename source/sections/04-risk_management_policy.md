@@ -79,7 +79,7 @@ The intent of completing a risk assessment is to determine potential threats and
   * Output - Magnitude of impact rating of low (10), medium (50), or high (100). Refer to the [NIST SP 800-30](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf) definitions of low, medium, and high.
 
 * Step 7. Risk Determination
-  * Establish a risk level using the Human Data Risk Assessment Tool(HDRAT). The risk rating also presents actions that senior management must take for each risk level.
+  * Establish a risk level using the following rubrick. The risk rating also presents actions that senior management must take for each risk level.
   * Output - Risk level of low (<20), medium (21-40) or high (>40). Refer to the [NIST SP 800-30](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf) definitions of low, medium, and high.
 
 * Step 8. Control Recommendations

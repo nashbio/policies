@@ -36,10 +36,10 @@ Access to NashBio systems and applications is limited for all users, including b
 1. Requests for access to NashBio Platform systems and applications are made formally using the following process:
   1. A NashBio workforce member initiates the access request by Communicating directly with the Security Officer or Pivacy Officer.
      * User identities must be verified prior to granting access to new accounts.
-     * Identity verification must be done in person where possible; for remote employees, identities must be verified over the phone.
-  2. The Security Officer (or Privacy Officer)will grant access to systems as dictated by the employee's job title. If additional access is required outside of the minimum necessary to perform job functions, the requester must include a description of why the additional access is required as part of the access request.
+     * Identity verification must be done in person where possible; for remote employees, identities must be verified over the phone or video chat.
+  2. The Security Officer (or Privacy Officer or designee) will grant access to systems as dictated by the employee's job title. If additional access is required outside of the minimum necessary to perform job functions, the requester must include a description of why the additional access is required as part of the access request.
   3. Once the review is completed, the Security Officer (or Privacy Officer) approves or rejects the request.
-  4. If the review is approved, the Security Officer or Privacy Officer then marks the Issue as Done, adding any pertinent notes required. The Security Officer or Privacy Officer then grants requested access.
+  4. If the review is approved, the Security Officer (or Privacy Officer) adds any pertinent notes. The Security Officer or Privacy Officer then grants requested access.
      * For production systems, access grants are accomplished by adding the appropriate user account to the IAM configuration or User access control lists used by those systems.  Account management for production systems may be delegated to a NashBio employee at the discretion of the Security Officer or Privacy Officer.
      * For internal Workspace systems, access grants are accomplished by adding the appropriate user account to the IAM configuration or User access control lists used by those systems.  Account management for systems may be delegated to a NashBio employee at the discretion of the Security Officer or Privacy Officer.
 2. Access is not granted until receipt, review, and approval by the NashBio Security Officer or Privacy Officer.
@@ -50,11 +50,9 @@ Access to NashBio systems and applications is limited for all users, including b
 6. Temporary accounts are not used unless absolutely necessary for business purposes.
    * Accounts are reviewed every 90 days to ensure temporary accounts are not left unnecessarily.
    * Accounts that are inactive for over 90 days are removed.
-7. In the case of non-personal information, such as generic educational content, identification and authentication may not be required. This is the responsibility of NashBio Customers to define, and not NashBio.
-8. Privileged users must first access systems using standard, unique user accounts before switching to privileged users and performing privileged tasks.
-   * For production systems, this is enforced by creating non-privileged user accounts that must invoke `sudo` to perform privileged tasks.
-   * Rights for privileged accounts are granted by the Security Officer or Privacy Officer using the process outlined in [§7.2 paragraph 1](#7.2-access-establishment-and-modification).
-9. All application to application communication using service accounts is restricted and not permitted unless absolutely needed. Automated tools are used to limit account access across applications and systems.
+7. In the case of non-sensitive information, such as generic educational content or marketing materials, identification and authentication may not be required.
+8. Users who require privledged access are provided temporary credentials on their NashBio ID (Google Workspace) accounts.  These esclated permissions are provided by the Security Officer for specific purposes.
+9. All application to application communication using service accounts and IAM configuration is provided according to principle of least access. Automated tools are used to limit account access across applications and systems.
 10. Generic accounts are not allowed on NashBio systems.
 11. Access to production or development systems is granted through encrypted, SSL tunnels that utilize two-factor authentication.
     * Two-factor authentication is accomplished using a Time-based One-Time Password (TOTP) or a Nashbio-provided physical security key (Yubikey) as the second factor.
@@ -72,7 +70,7 @@ Access to NashBio systems and applications is limited for all users, including b
 ## 7.4 Access Authorization
 
 1. Role based access categories for each NashBio system and application are pre-approved by the Security Officer, or an authorized delegate of the Security Officer.
-2. NashBio utilizes hardware and software firewalls to segment data, prevent unauthorized access, and monitor traffic for denial of service attacks.
+2. NashBio utilizes hardware and software firewalls to segment data, prevent unauthorized access, and monitor traffic.
 
 ## 7.5 Person or Entity Authentication
 
@@ -196,7 +194,7 @@ Authorization to Access:
 Modification of Access:
 
    1. Individuals who transfer to another department within NashBio may require changes with regard to the systems and appllications that they need to access. The department to which the individual is transferring is responsible for defining the specific systems and levels of access that the individual requires in the new role. The department the individual is leaving is responsible for taking the appropriate steps to deactivate the individual's access to all other systems, including departmental systems.
-   2. Individuals may chagne job roles, necessitating changes to the level of systems access. The individual's manager is responsible for taking the appropriate steps, including notifying the Security Officer, so that the individual maintains the appropriate level of access needed in order to fulfill their job responsiblities.
+   2. Individuals may change job roles, necessitating changes to the level of systems access. The individual's manager is responsible for taking the appropriate steps, including notifying the Security Officer, so that the individual maintains the appropriate level of access needed in order to fulfill their job responsiblities.
    3. Security Officer is responsible for initiating the request for access process for individuals and for identifying the appropriate level of approval required based upon the relationship of the individual to NashBio and the category of information to which access is requested. 
 
 Termination of Access:
@@ -221,42 +219,37 @@ Any system that stores Private or Restricted Data and is accessed from outside o
 
 1. General Information: 
    1. The NashBio Google Workspace Account (NashBio ID) is the central identity source used at NashBio. Other Electronic Identities with elevated privileges may be assigned to NashBio Workforce members as appropriate and are subject to the same applicable requirements articulated in this policy.
-   2. NashBio Google Workspace Account may only be assigend to individuals and may not be assigned to entities or organizations or shared between individuals.
+   2. NashBio IDs may only be assigend to individuals and may not be assigned to entities or organizations or shared between individuals.
    3. An individual may have no more than one NashBio ID assigned to them for the purpose of uniquely identifying that individual. 
-2. NashBio IDs(Google Workspace Account) Used for Unique Identification/ Authentication of End Users:
+2. NashBio IDs are used for Unique Identification/Authentication of End Users:
    1. NashBio IDs With No Termination Date: NashBio IDs that are created as part of the onboarding process have no termination date and will remain active until HR recieves notification that access will be terminated.
-   2. NashBio IDs(Google Workspace Account) for Term Positions:
-      * NashBio IDs for Term Positions shall only be active for the period of time necessary for the Term employee to fulfill their job duties for NashBio at which time the NashBio ID must be deactivated by the NashBio ID Requestor. NashBio IDs for Term Positions may be active for a maximum of one year at which time they will need to be deactivated if not renewed. renewal of a NashBio Id for a Term Posistion may only occur if there is an ongoing business need. 
+   2. NashBio IDs for Term Positions:
+      * NashBio IDs for Term Positions shall only be active for the period of time necessary for the Term employee to fulfill their job duties for NashBio at which time the NashBio ID must be deactivated by the NashBio ID Requestor. NashBio IDs for Term Positions may be active for a maximum of one year at which time they will need to be deactivated if not renewed. Renewal of a NashBio ID for a Term Posistion may only occur if there is an ongoing business need. 
       * It is the responsibility of NashBio ID Requestor to ensure the Term Position NashBio ID is active for the appropriate period of time.
-3. Resource Account NashBio IDs:
-   1. Resource Accounts are only used for system-to-system communication or other automated tasks. resource Accounts must not be used to manually log in to NashBio information systems.
-   2. All Resource Accounts must be in compliance with this policy by Novermber 1, 2022 or be granted a security exception by NashBio Enterpries Cybersecurity. 
-4.  Test NashBio IDs:
-   1. Management of Test NashBio IDs are the responsibility of the individual to whom they are issued(e.g., periodic passowrd changes, may not be shared, etc...).
-5. Dual Identities:
-   1. Individuals with a Dual Identity must use their NashBio ID to Access NashBio information systems. 
-   2. Individuals with Dual Identities will have an Electronic Identitiy without a termination date(Primary account) with NashBio and an Electronic Identity with a termination date (secondary account)with the other organization. Secondary accounts can be requested.
-6. NashBio ID Requestor Responsibilities:
-   1. When requesting a NashBio Id, the NashBio ID Requestor must document the business need for the issuance of the NashBio ID.
-   2. When a Term Position NashBio Id or a Dual Identity is requested, it is the responsiblity of the NashBio Id Requestor to ensure that the identity of the individual for whom the NashBio ID is requested has been verified with a Goevernment Issued Identifiaction Document. 
-7. Deactivate a NashBio ID:
-   1. For deactivation of Term Position NashBio IDs, Resource Account NashBio IDs and Test NashBio IDs, request deactivtion with a General-Purpose Pegasus ticket. The business justification for deactivation must be provided in the request.
-8. NashBio ID Issuance Process:
-   1. For NashBio Id(Google Workspace Account) requests, the identity management system must retain the following data elements: 
+3. NashBio does not provide Test NashBio IDs or authorize Dual Identities.
+4. Deactivate a NashBio ID:
+   1. For deactivation NashBio IDs, a request must be made directly to the Security Officer. The business justification for deactivation must be provided in the request.
+5. NashBio ID Issuance Process:
+   1. For NashBio ID requests, the identity management system must retain the following data elements: 
       * Name of the individual making the request;
       * Name of the individual for whom the request was made;
       * Action taken;
       * Date of request fulfillment;
       * Busines need for NashBio ID; and
       * NashBio ID
-   2. The data generated pusuant to issuance of a NashBio Id shall be retained indefinitely. 
+   2. The data generated pusuant to issuance of a NashBio ID shall be retained indefinitely. 
 
 ## 7.19 Encryption standards:
 
-   1. Mediums in Scope(Encryption standardds SOP):
+   1. Mediums in Scope(Encryption standards SOP):
       1. IPsec Virtual Private Network (VPN) Tunnels.
       2. Encrypted Browser Connections.
       3. Fixed Storage (Hard Drives).
       4. Removable Storage (USB/DVD-ROM/Bluetooth).
       5. Mobile Devices (Smartphones, Tablets).
-   2. NashBio encrypts all data at rest and in trasit according to Google's Encryption Guidelines.
+   2. NashBio encrypts all data at rest and in trasit according to [Google's Encryption Guidelines](https://cloud.google.com/docs/security/encryption/default-encryption). 
+      * Google uses several layers of encryption to protect customer data at rest in Google Cloud products.
+      * Google Cloud encrypts all customer content stored at rest, without any action required from the customer, using one or more encryption mechanisms.
+      * Data for storage is split into chunks, and each chunk is encrypted with a unique data encryption key. These data encryption keys are stored with the data, encrypted with ("wrapped" by) key encryption keys that are exclusively stored and used inside Google's central Key Management Service. Google's Key Management Service is redundant and globally distributed.
+      * All data stored in Google Cloud is encrypted at the storage level using AES256, with the exception of a small number of Persistent Disks created before 2015 that use AES128.
+      * Google uses a common cryptographic library, Tink, which incorporates our FIPS 140-2 Level 1 validated module, BoringCrypto, to implement encryption consistently across almost all Google Cloud products. Consistent use of a common library means that only a small team of cryptographers needs to implement and maintain this tightly controlled and reviewed code.

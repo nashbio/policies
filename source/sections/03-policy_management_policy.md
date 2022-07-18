@@ -19,8 +19,7 @@ NashBio implements policies and procedures to maintain compliance and integrity 
   3. Once the review is completed, the Security Officer or Privacy Officer approves or rejects the Issue. If the Issue is rejected, it goes back for further review and documentation.
   4. If the review is approved, the Security Officer or Privacy Officer then marks the Issue as Done, adding any pertinent notes required, and editing this company policy document with updated policies.
   5. If the policy change requires technical modifications to production systems, those changes are carried out by authorized personnel using NashBio's [change management process (§9.4)](#9.4-changing-existing-systems).
-4. All policies are made accessible to all NashBio workforce members.  
-   * Changes are automatically communicated to all NashBio team members through integrations between GitHub and Slack that log all GitHub policy channels to a dedicated NashBio Slack Channel.
+4. All policies are made accessible to all NashBio workforce members. 
    * The Security Officer also communicates policy changes to all employees via email. These emails include a high-level description of the policy change using terminology appropriate for the target audience.
 5. All policies, and associated documentation, are retained for 6 years from the date of its creation or the date when it last was in effect, whichever is later
    1. Version history of all NashBio policies is done via GitHub.

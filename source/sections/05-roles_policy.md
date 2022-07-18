@@ -25,7 +25,7 @@ The Privacy Officer is responsible for assisting with compliance and security tr
 3. Manage relationships with customers and partners as those relationships affect security and compliance of ePHI.
 4. Assist Security Officer as needed.
 
-The current NashBio Privacy Officer is Leeland Ekstrom ([leeland@nashvillebiosciences.com](mailto:leeland@nashvillebiosciences.com)).
+The current NashBio Privacy Officer is Elizabeth Ann Stringer ([elizabethann@nashvillebiosciences.com](mailto:elizabethann@nashvillebiosciences.com)).
 
 ### 5.2.1 Workforce Training Responsibilities
 
@@ -39,27 +39,22 @@ The current NashBio Privacy Officer is Leeland Ekstrom ([leeland@nashvillebiosci
 3. The training session focuses on, but is not limited to, the following subjects defined in NashBio's security policies and procedures:
    1. HIPAA Privacy, Security, and Breach notification rules;
    2. CITI Training;
-   3. NIST Security Rules;
-   4. Risk Management procedures and documentation;
-   5. Auditing - NashBio may monitor access and activities of all users;
-   6. Workstations may only be used to perform assigned job responsibilities, it is the responsibility of employees to protect the security of private information;
-   7. Users may not download software onto NashBio's workstations and/or systems without prior approval from the Security Officer;
-   8. Users are required to report malicious software to the Security Officer immediately;
-   9. Users are required to report unauthorized attempts, uses of, and theft of NashBio's systems and/or workstations;
-   10. Users are required to report unauthorized access to facilities
-   11. Users are required to report noted log-in discrepancies (i.e. application states user's last log-in was on a date user was on vacation);
-   12. Users may not alter ePHI maintained in a database, unless authorized to do so by a NashBio Security Officer;
-   13. Users are required to understand their role in NashBio's contingency plan;
-   14. Users may not share their user names nor passwords with anyone;
-   15. Requirements for users to create and change passwords, found in Unique user identificaiton policies (§7.6);
-   16. Users must set all applications that contain or transmit ePHI to automatically log off after 15 minutes of inactivity;
-   17. Supervisors are required to report terminations of workforce members and other outside users;
-   18. Supervisors are required to report a change in a user's title, role, department, and/or location;
-   19. Supervisors must determine the minimum necessary access an employee or partner requires to complete their job role.
-   20. Procedures to move and record movement of hardware and electronic media containing ePHI;
-   21. Procedures to dispose of discs, CDs, hard drives, and other media containing ePHI;
-   22. Procedures to re-use electronic media containing ePHI;
-   23. SSH key and sensitive document encryption procedures.
+   3. Risk Management procedures and documentation;
+   4. Auditing - NashBio may monitor access and activities of all users;
+   5. Workstations may only be used to perform assigned job responsibilities, it is the responsibility of employees to protect the security of private information;
+   6. Users are required to report malicious software to the Security Officer immediately;
+   7. Users are required to report unauthorized attempts, uses of, and theft of NashBio's systems and/or workstations;
+   8. Users are required to report unauthorized access to facilities
+   9. Users are required to report noted log-in discrepancies (i.e. application states user's last log-in was on a date user was on vacation);
+   10. Users may not alter ePHI maintained in a database, unless authorized to do so by a NashBio Security Officer;
+   11. Users may not share their user names nor passwords with anyone;
+   12. Requirements for users to create and change passwords, found in Unique user identificaiton policies (§7.6);
+   13. Supervisors are required to report terminations of workforce members and other outside users;
+   14. Supervisors are required to report a change in a user's title, role, department, and/or location;
+   15. Supervisors must determine the minimum necessary access an employee or partner requires to complete their job role.
+   16. Procedures to report PHI present in scrubbed data.
+   17. Procedures to re-use electronic media containing ePHI;
+   18. SSH key and sensitive document encryption procedures.
 
 ## 5.3 Security Officer
 
@@ -69,7 +64,7 @@ The current NashBio Security Officer is Jud Schneider([jud@nashvillebiosciences.
 
 ### 5.3.1 Organizational Responsibilities
 
-The Security Officer, in collaboration with the Privacy Officer, is responsible for facilitating the development, testing, implementation, training, and oversight of all activities pertaining to NashBio's efforts to be compliant with the HIPAA Security Regulations, HITRUST CSF, SAC2, and any other security and compliance frameworks. The intent of the Security Officer Responsibilities is to maintain the confidentiality, integrity, and availability of ePHI. The Security Officer is appointed by and reports to the Board of Directors and the COO.
+The Security Officer, in collaboration with the Privacy Officer, is responsible for facilitating the development, testing, implementation, training, and oversight of all activities pertaining to NashBio's efforts to be compliant with the HIPAA Security Regulations, HITRUST CSF, SOC2, and any other security and compliance frameworks. The intent of the Security Officer Responsibilities is to maintain the confidentiality, integrity, and availability of ePHI. The Security Officer is appointed by and reports to the Board of Directors and the CEO.
 
 These organizational responsibilities include, but are not limited to the following:
 
@@ -101,11 +96,6 @@ These organizational responsibilities include, but are not limited to the follow
     * Media Disposal and/or Re-use;
     * Documentation requirements.
 13. The Security Officer works with the CEO to ensure that any security objectives have appropriate consideration during the budgeting process.
-    * In general, security and compliance are core to NashBio's technology and service offerings; in most cases this means security-related objectives cannot be split out to separate budget line items.
-    * For cases that *can* be split out into discrete items, such as licenses for commercial tooling, the Security Officer follows NashBio's standard corporate budgeting process.
-      * At the beginning of every fiscal year, the CEO contacts the Security Officer to plan for the upcoming year's expenses.
-      * The Security Officer works with the CEO to forecast spending needs based on the previous year's level, along with changes for the upcoming year such as additional staff hires.
-      * During the year, if an unforeseen security-related expense arises that was not in the budget forecast, the Security Officer works with the CEO to reallocate any resources as necessary to cover this expense.
 14. The Security Officer reviews all company policies to make sure they are up to date on an annual basis. 
 
 ### 5.3.2 Supervision of Workforce Responsibilities
