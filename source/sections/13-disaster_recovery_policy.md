@@ -58,7 +58,7 @@ The following teams have been developed and trained to respond to a contingency 
 
 1. The **Ops Team** is responsible for recovery of the Nashbio hosted environment, network devices, and all servers. Members of the team include personnel who are also responsible for the daily operations and maintenance of Nashbio. The team leader is the CTO and directs the Engineering Team.
 
-Members of the Ops and Web Services teams must maintain local copies of the contact information from [§13.2](#13.2-line-of-succession). Additionally, the CTO must maintain a local copy of this policy in the event Internet access is not available during a disaster scenario.
+Members of the Ops team must maintain local copies of the contact information from [§13.2](#13.2-line-of-succession). Additionally, the CTO must maintain a local copy of this policy in the event Internet access is not available during a disaster scenario.
 
 ## 13.4 Testing and Maintenance
 

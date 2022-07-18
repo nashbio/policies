@@ -70,9 +70,16 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
     * Determination of significant events requiring further review and follow-up.
     * Identification of appropriate reporting channels for audit results and required follow-up.
 9. Vulnerability testing software may be used to probe the network to identify what is running (e.g., operating system or product versions in place), whether publicly-known vulnerabilities have been corrected, and evaluate whether the system can withstand attacks aimed at circumventing security controls.
-    * Testing may be carried out internally or provided through an external third-party vendor. Whenever possible, a third party auditing vendor should not be providing the organization IT oversight services (e.g., vendors providing IT services should not be auditing their own services - separation of duties, cavirin is employed for this purpose).
+    * Testing may be carried out internally or provided through an external third-party vendor. Whenever possible, a third party auditing vendor should not be providing the organization IT oversight services (e.g., vendors providing IT services should not be auditing their own services - separation of duties, Cavirin is employed for this purpose).
     * Testing shall be done on a continuous basis by Cloud Security Command Center.
 10. Software patches and updates will be applied to all systems in a timely manner.
+11. All access to NashBio systems and services is reviewed and updated on an annual basis to ensure proper authorizations are in place commensurate with job functions. The process for conducting reviews is outlined below:
+   1. The Security Officer initiates the review of user access by creating an Issue in the NashBio Quality Management System.
+   2. The Security Officer is assigned to review levels of access for each NashBio workforce member.
+   3. If user access is found during review that is not in line with the principle of least privilege, the process below is used to modify user access and notify the user of access changes. Once those steps are completed, the Issue is then reviewed again.
+   4. Once the review is completed, the Security Officer approves or rejects the Issue. If the Issue is rejected, it goes back for further review and documentation.
+   5. If the review is approved, the Security Officer then marks the Issue as Done, adding any pertinent notes required.
+   6. Review of user access is monitored on an annual basis using the Quality Management System reporting to assess compliance with above policy.
 
 ## 8.3 Audit Requests
 
@@ -84,7 +91,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
 
 ## 8.4 Review and Reporting of Audit Findings
 
-1. Audit information that is routinely gathered must be reviewed in a timely manner, currently quarterly, by the responsible workforce member(s). On a quarterly basis, logs are reviewed to assure the proper data is being captured and retained. The following process details how log reviews are done at NashBio:
+1. Audit information that is routinely gathered must be reviewed in a timely manner, currently annually, by the responsible workforce member(s). On an annual basis, logs are reviewed to assure the proper data is being captured and retained. The following process details how log reviews are done at NashBio:
   1. The Security Officer initiates the log review by creating an Issue in the NashBio Quality Management System.
   2. The Security Officer, or a NashBio Security Engineer assigned by the Security Officer, is assigned to review the logs.
   3. Relevant audit log findings are added to the Issue; these findings are investigated in a later step. Once those steps are completed, the Issue is then reviewed again.
@@ -96,7 +103,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
 3. Reports of audit results shall be limited to internal use on a minimum necessary/need-to-know basis. Audit results shall not be disclosed externally without administrative and/or legal counsel approval.
 4. Security audits constitute an internal, confidential monitoring practice that may be included in NashBio's performance improvement activities and reporting. Care shall be taken to ensure that the results of the audits are disclosed to administrative level oversight structures only and that information which may further expose organizational risk is shared with extreme caution. Generic security audit information may be included in organizational reports (individually-identifiable ePHI shall not be included in the reports).
 5. Whenever indicated through evaluation and reporting, appropriate corrective actions must be undertaken. These actions shall be documented and shared with the responsible workforce members, Customers, and/or Partners.
-6. Log review activity is monitored on a quarterly basis using the Quality Management System reporting to assess compliance with above policy.
+6. Log review activity is monitored on an annual basis using the Quality Management System reporting to assess compliance with above policy.
 
 ## 8.5 Auditing Customer and Partner Activity
 
@@ -123,7 +130,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
    * Choose an audit firm that is independent of other organizational operations;
    * Ensure technical competence of the audit firm staff;
    * Require the audit firm's adherence to applicable codes of professional ethics;
-   * Obtain a Privacy Non-Disclosure system;
+   * Obtain a signed HIPAA business associate agreement, or Privacy Non-Disclosure system;
    * Assign organizational responsibility for supervision of the external audit firm.
 
 ## 8.9 Retention of Audit Data
@@ -131,7 +138,7 @@ This policy applies to all NashBio Add-on systems that store, transmit, or proce
 1. Audit logs shall be maintained based on organizational needs. There is no standard or law addressing the retention of audit log/trail information. Retention of this information shall be based on:
    * Organizational history and experience.
    * Available storage space.
-2. Reports summarizing audit activities shall be retained for a period of six years.
+2. Reports summarizing audit activities shall be retained for a period of three years.
 3. Audit log data is encrypted and moved to warm storage (currently Google Cloud Storage) using automated scripts, and is retained for a minimum of one year.
 
 ## 8.10 Potential Trigger Events

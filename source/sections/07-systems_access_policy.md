@@ -34,43 +34,34 @@ Access to NashBio systems and applications is limited for all users, including b
 ## 7.2 Access Establishment and Modification
 
 1. Requests for access to NashBio Platform systems and applications are made formally using the following process:
-  1. A NashBio workforce member initiates the access request by creating an Issue in the NashBio Quality Management System.
+  1. A NashBio workforce member initiates the access request by Communicating directly with the Security Officer or Pivacy Officer.
      * User identities must be verified prior to granting access to new accounts.
      * Identity verification must be done in person where possible; for remote employees, identities must be verified over the phone.
-     * For new accounts, the method used to verify the user's identity must be recorded on the Issue.
-  2. The Security Officer or Privacy Officer will grant access to systems as dictated by the employee's job title. If additional access is required outside of the minimum necessary to perform job functions, the requester must include a description of why the additional access is required as part of the access request.
-  3. Once the review is completed, the Security Officer or Privacy Officer approves or rejects the Issue. If the Issue is rejected, it goes back for further review and documentation.
+  2. The Security Officer (or Privacy Officer)will grant access to systems as dictated by the employee's job title. If additional access is required outside of the minimum necessary to perform job functions, the requester must include a description of why the additional access is required as part of the access request.
+  3. Once the review is completed, the Security Officer (or Privacy Officer) approves or rejects the request.
   4. If the review is approved, the Security Officer or Privacy Officer then marks the Issue as Done, adding any pertinent notes required. The Security Officer or Privacy Officer then grants requested access.
-     * New accounts will be created with a temporary secure password that meets all requirements from [§7.12](#7.12-password-management), which must be changed on the initial login.
-     * All password exchanges must occur over an authenticated channel(e.g., phone call, encrypted email...).
-     * For production systems, access grants are accomplished by adding the appropriate user account to the corresponding LDAP group.
-     * For non-production systems, access grants are accomplished by leveraging the access control mechanisms built into those systems. Account management for non-production systems may be delegated to a NashBio employee at the discretion of the Security Officer or Privacy Officer .
+     * For production systems, access grants are accomplished by adding the appropriate user account to the IAM configuration or User access control lists used by those systems.  Account management for production systems may be delegated to a NashBio employee at the discretion of the Security Officer or Privacy Officer.
+     * For internal Workspace systems, access grants are accomplished by adding the appropriate user account to the IAM configuration or User access control lists used by those systems.  Account management for systems may be delegated to a NashBio employee at the discretion of the Security Officer or Privacy Officer.
 2. Access is not granted until receipt, review, and approval by the NashBio Security Officer or Privacy Officer.
-3. The request for access is retained for future reference.
-4. All access to NashBio systems and services is reviewed and updated on an annual basis to ensure proper authorizations are in place commensurate with job functions. The process for conducting reviews is outlined below:
-   1. The Security Officer initiates the review of user access by creating an Issue in the NashBio Quality Management System.
-   2. The Security Officer is assigned to review levels of access for each NashBio workforce member.
-   3. If user access is found during review that is not in line with the least privilege principle, the process below is used to modify user access and notify the user of access changes. Once those steps are completed, the Issue is then reviewed again.
-   4. Once the review is completed, the Security Officer approves or rejects the Issue. If the Issue is rejected, it goes back for further review and documentation.
-   5. If the review is approved, the Security Officer then marks the Issue as Done, adding any pertinent notes required.
-   6. Review of user access is monitored on an annual basis using the Quality Management System reporting to assess compliance with above policy.
-5. Any NashBio workforce member can request change of access using the process outlined in [§7.2 paragraph 1](#7.2-access-establishment-and-modification).
-6. Access to production systems is controlled using centralized user management and authentication.
-7. Temporary accounts are not used unless absolutely necessary for business purposes.
+     * The request for access is retained for future reference.
+3. All access to NashBio systems and services is reviewed and updated on an annual basis to ensure proper authorizations are in place commensurate with job functions.
+4. Any NashBio workforce member can request change of access using the process outlined in [§7.2 paragraph 1](#7.2-access-establishment-and-modification).
+5. Access to production systems is controlled using centralized user management and authentication.
+6. Temporary accounts are not used unless absolutely necessary for business purposes.
    * Accounts are reviewed every 90 days to ensure temporary accounts are not left unnecessarily.
    * Accounts that are inactive for over 90 days are removed.
-8. In the case of non-personal information, such as generic educational content, identification and authentication may not be required. This is the responsibility of NashBio Customers to define, and not NashBio.
-9. Privileged users must first access systems using standard, unique user accounts before switching to privileged users and performing privileged tasks.
+7. In the case of non-personal information, such as generic educational content, identification and authentication may not be required. This is the responsibility of NashBio Customers to define, and not NashBio.
+8. Privileged users must first access systems using standard, unique user accounts before switching to privileged users and performing privileged tasks.
    * For production systems, this is enforced by creating non-privileged user accounts that must invoke `sudo` to perform privileged tasks.
    * Rights for privileged accounts are granted by the Security Officer or Privacy Officer using the process outlined in [§7.2 paragraph 1](#7.2-access-establishment-and-modification).
-10. All application to application communication using service accounts is restricted and not permitted unless absolutely needed. Automated tools are used to limit account access across applications and systems.
-11. Generic accounts are not allowed on NashBio systems.
-12. Access to production or development systems is granted through encrypted, SSL tunnels that utilize two-factor authentication.
+9. All application to application communication using service accounts is restricted and not permitted unless absolutely needed. Automated tools are used to limit account access across applications and systems.
+10. Generic accounts are not allowed on NashBio systems.
+11. Access to production or development systems is granted through encrypted, SSL tunnels that utilize two-factor authentication.
     * Two-factor authentication is accomplished using a Time-based One-Time Password (TOTP) or a Nashbio-provided physical security key (Yubikey) as the second factor.
     * VPN connections use 256-bit AES 256 encryption, or equivalent.
     * Sessions are automatically disconnected after 30 minutes of inactivity.
-13. In cases of increased risk or known attempted unauthorized access, immediate steps are taken by the Security and Privacy Officer to limit access and reduce risk of unauthorized access.
-14. Direct system to system, system to application, and application to application authentication and authorization are limited and controlled to restrict access.
+12. In cases of increased risk or known attempted unauthorized access, immediate steps are taken by the Security and Privacy Officer to limit access and reduce risk of unauthorized access.
+13. Direct system to system, system to application, and application to application authentication and authorization are limited and controlled to restrict access.
 
 ## 7.3 Workforce Clearance
 
@@ -141,86 +132,76 @@ NashBio does not use paper records for any sensitive information. Use of paper f
 
 1. User IDs, passwords, and physical security keys are used to control access to NashBio systems and may not be disclosed to anyone for any reason.
 2. Users may not allow anyone, for any reason, to have access to any information system using another user's unique user ID and password.
-3. On all production systems and applications in the NashBio environment, password configurations are set to require:
+3. On all production systems and applications in the NashBio environment, password configurations are required to be complex and are govened by Google Workspace password configuration policy. These may include:
    * a minimum length of 8 characters;
    * a mix of upper case characters, lower case characters, and numbers or special characters;
-   * a requirement for two factor authentication;
    * account lockout after 10 invalid attempts;
+   * a requirement for two factor authentication, all accounts require two factor authentication enabled by organizational policy. Text message as a second factor is explicitly disabled;
    * all accounts with programatic data access require the use of a physical security key (yubikey) issued by NashBio;
-4. All system and application passwords must be stored and transmitted securely and through Last Pass. 
-   * Where possible, passwords should be stored in a hashed format using a salted cryptographic hash function (SHA-256 or equivalent).
-   * Passwords that must be stored in non-hashed format must be encrypted at rest pursuant to the requirements in [§17.8](#17.8-production-data-security).
-   * Transmitted passwords must be encrypted in flight pursuant to the requirements in [§17.9](#17.9-transmission-security).
-5. Each information system automatically requires users to change passwords at a pre-determined interval as determined by the organization, based on the criticality and sensitivity of the ePHI contained within the network, system, application, and/or database.
+4. All system and application passwords must be stored and transmitted securely and through LastPass. This means: 
+   * passwords are stored in a hashed format using a salted cryptographic hash function (SHA-256 or equivalent), and are encrypted at rest pursuant to the requirements in [§17.8](#17.8-production-data-security).
+   * transmitted passwords are also encrypted in flight pursuant to the requirements in [§17.9](#17.9-transmission-security).
+5. Password strength is monitored by the Security Officer and weak/compromised passwords are addressed on a case by case basis.
 6. Passwords are inactivated immediately upon an employee's termination (refer to the [Employee Termination Procedures in §7.10](#7.10-employee-termination-procedures)).
 7. All default system, application, and Partner passwords are changed before deployment to production.
 8. Upon initial login, users must change any passwords that were automatically generated for them.
-9. Password change methods must use a confirmation method to correct for user input errors.
-10. All passwords used in configuration scripts are secured and encrypted(o-keys).
+9. Password change methods use a confirmation method to correct for user input errors.
+10. All passwords used in configuration scripts are secured and encrypted.
 11. If a user believes their user ID has been compromised, they are required to immediately report the incident to the Security Office.
 12. In cases where a user has forgotten their password, the following procedure is used to reset the password.
-    * The user submits a password reset request to the CTO. The request should include the system to which the user has lost access and needs the password reset.
+    * The user submits a password reset request to the Security Officer. The request should include the system to which the user has lost access and needs the password reset.
     * An administrator with password reset privileges is notified and connects directly with the user requesting the password reset.
     * The administrator verifies the identity of the user either in-person or through a separate communication channel such as a phone call.
     * Once verified, the administrator sends the password reset link to the user.
 
-Gsuite admin logging is used to track and store password reset requests. The Security Officer is the owner of this group and modifies membership as needed.
+Google Workspace admin logging is used to track and store password reset requests. The Security Officer is the owner of this group and modifies membership as needed.
 
 ## 7.13 Access to ePHI
 
-1. Employees may not download ePHI to any workstations used to connect to production systems.
-2. Disallowing transfer of ePHI to workstations is enforced through technical measures.
-   * All production access to systems is performed using SSL and Oauth2 authentication and where appropriate through a bastion/jump host accessed through SSL.
+1. Employees may not download ePHI to any workstations unless authorized.
+2. All production access to systems is performed using SSL and Oauth2 authentication and where appropriate through a bastion/jump host accessed through SSL.
 
 ## 7.14 DaaS Customer Access to Systems
 
 NashBio grants DaaS customer secure system access via Nashbio provided service account connections. This access is only to Customer-specific systems and databases, no other systems in the environment. These connections are setup at customer deployment. These connections are secured and encrypted and are the only method for customers to connect to NashBio hosted systems.
 
-Nashbio segments customers and customer data into customer-specific cloud projects.  Data insertion into the project is performed programatically and logged via Stackdriver, and in github.
+Nashbio segments customers and customer data into customer-specific cloud projects.  Data insertion into the project is performed programatically and logged via Stackdriver and in Github.
 
-In the case of data migration, NashBio does, on a case by case basis, support customers in importing data. In these cases NashBio requires that all data is secured and encrypted in transit, such as by using SFTP or SCP for transferring files.
+In the case of data migration, NashBio does, on a case by case basis, support customers in importing data. In these cases NashBio requires that all data is secured and encrypted in transit, such as by using SFTP, or other encrypted/authenticated mechanisms for transferring files.
 
 In the case of an investigation, NashBio will assist customers, at NashBio's discretion, and law enforcement in forensics.
 
 ## 7.15 Authorization to Electronic Systems and Applications
 
-Vanderbilt University Medical Center (VUMC) requires an assigned digital representation for individuals through a unique username. Authentication of individuals to electronic systems and Applications require, at minimum a passoword. Systems and Applications that transmit and/or store VUMC Restricted or Private Data must utilize a VUMC-Approved Authentication Solution. Access to certain electronic systems and Applications requires Multi-Factor Authentication.
+NashBio requires an assigned digital representation for individuals through a unique username. Authentication of individuals to electronic systems and Applications require, at minimum, a password and a second-factor token on a physical device. Systems and Applications that transmit and/or store NashBio Restricted or Private Data must utilize a NashBio-Approved Authentication Solution. Access to all electronic systems and Applications requires Multi-Factor Authentication.
 
-Authenitcation solutions transmitting and/or storing password data must do so utilizing secure methods.
-
-1. See VUMC-Approved Authentication SOP for: 
-   1. A list of VUMC-Approved Authentication Solutions; and
-   2. A list of Applications/resources requiring MFA: and
-   3. Password Requirements for Authenticaiton Solutions 
+Authenitcation solutions transmitting and/or storing password data must do so utilizing secure methods.  NashBio provides a LastPass account to employees to securely store password or other sensitive keys/tokens.  NashBio requires that any transmission of sensitive keys be performed using a shared object in LastPass in order to ensure secure encrypted transmission.  Other methods (public-private GPG-encryption, etc.) may be used if authorized by the Security Officer.
 
 ## 7.16 Authorization and Access to Electronic Systems and Applications
 
 Authorization to Access:
 
 1. Employees:
-   1. All who receive access to the VUMC network and/or corresponding applications must: 
+   1. All who receive access to NashBio applications must: 
       * Complete Health Insurance Portability and Accountability Act (HIPAA) Privacy and Security Training; and 
-      * Sign a VUMC Confidentiality agreement.
-   2. Access to specific Restricted Systems may be granted according to job role upon request of the individual's Security Officer and written approval by the individual's Director (or higher-level position).
+      * Sign a Confidentiality agreement.
+   2. Access to specific Restricted Systems may be granted by the Security Officer according to job role upon request.
 2. Individuals, other than employees, granted access to Restricted Systems:
-   1. Access to specific Restricted Systems may be granted according to job role upon request of the individual's Security Officer and written approval by the individual's Director (or higher-level position).
-   2. Authorization to access patient information may be granted as qualified in the policy: Access to Individually Identifiable Health Information.
-   3. All who receive access to the VUMC network and/or corresponding applicaitons must: 
-      * Sign a VUMC Confidentiality agreement.
+   1. Access to specific Restricted Systems may be granted by the Security Officer according to job role upon request.
+   2. Access controls are equivalent to those for NashBio employees.
+   3. All who receive access to NashBio applicaitons must: 
+      * Sign a Confidentiality agreement.
       * Be prepared to provide evidence of Health Insurance Portability and Accountability Act (HIPAA) Privacy and Security Training. 
-3. Public Individuals:
-   1. Access to Unrestricted Systems is available without authorization from NashBio.
-   2. Access to Restricted Systems is limited to specific applications and requires successful applicaiton by the requestor and confirmation of identification.
 
 Modification of Access:
 
-   1. Individuals who transfer to another department within NashBio may require changes with regard to the systems and appllications that they need to access. the department to which the individual is transferring is responsible for defining the specific systems and levels of access that the individual requires in the new role. The department the individual is leaving is responsible for taking the appropriate steps to deactivate the individual's access to all other systems, including departmental systems.
+   1. Individuals who transfer to another department within NashBio may require changes with regard to the systems and appllications that they need to access. The department to which the individual is transferring is responsible for defining the specific systems and levels of access that the individual requires in the new role. The department the individual is leaving is responsible for taking the appropriate steps to deactivate the individual's access to all other systems, including departmental systems.
    2. Individuals may chagne job roles, necessitating changes to the level of systems access. The individual's manager is responsible for taking the appropriate steps, including notifying the Security Officer, so that the individual maintains the appropriate level of access needed in order to fulfill their job responsiblities.
    3. Security Officer is responsible for initiating the request for access process for individuals and for identifying the appropriate level of approval required based upon the relationship of the individual to NashBio and the category of information to which access is requested. 
 
 Termination of Access:
 
-When an individual's eployment, contract, or other affiliation with NashBio terminates, the individual's manager or contract administrator notifies the Security Officer who is then responsible for takingsteps so that the individual's access to electronic systems and applications is deactivated. 
+When an individual's eployment, contract, or other affiliation with NashBio terminates, the individual's manager or contract administrator notifies the Security Officer who is then responsible for taking steps so that the individual's access to electronic systems and applications is deactivated. 
 
 External Access to Private or Restriced Data: 
 
@@ -229,9 +210,9 @@ Any system that stores Private or Restricted Data and is accessed from outside o
 ## 7.17 External (Remote) Access to NashBio Data Network
 
 1. External Access to NashBio Restricted Systems is limited to only those individuals who need such access to conduct NashBio business.
-2. All External Access to the NashBio data network must use NashBio Approved Authentication Solutions and employ encryption in transit.
+2. All External Access to the NashBio data network must use NashBio Approved Authentication Solutions and employ encryption in transit and Multi-Factor Authentication.
 3. External Access to systems hosting Restricted Data requires use of a remote access mechanism which employs encryption in transit and Multi-Factor Authentication.
-4. Networks privided by NashBio which are intended for use by the general public are considered external networks and are not considered part of the NashBio Enterprise data network.
+4. Nashbio does not provide internet access for general public use.
 5. An individual's External Access may be revoked after an extended period of non-use/inactivity.
 6. When an individual's employment, contract or other affiliation with NashBio ends, the individual's permission for external access shall be revoked. 
 7. NashBio will comply with any partner's or business associate's data access requirements, as long as they satisfy all of the security and encryption standards endorsed by NashBio. 
@@ -239,11 +220,11 @@ Any system that stores Private or Restricted Data and is accessed from outside o
 ## 7.18 Electronic Identity/NashBio ID Management
 
 1. General Information: 
-   1. The NashBio ID(Google Workspace Account) is the most commonly used at NashBio. Other Electronic Identities with elevated privileges may be assigned to NashBio Workforce members as appropriate and are subject to the same applicable requirements articulated in this policy.
-   2. NashBio IDs(Google Workspace Account) may only be assigend to individuals and may not be assigned  to entities or organizations or shared between individuals.
-   3. An individual may have no more than one NashBio ID(Google Workspace Account) assigned to them for the purpose of uniquely identifying that individual. 
+   1. The NashBio Google Workspace Account (NashBio ID) is the central identity source used at NashBio. Other Electronic Identities with elevated privileges may be assigned to NashBio Workforce members as appropriate and are subject to the same applicable requirements articulated in this policy.
+   2. NashBio Google Workspace Account may only be assigend to individuals and may not be assigned to entities or organizations or shared between individuals.
+   3. An individual may have no more than one NashBio ID assigned to them for the purpose of uniquely identifying that individual. 
 2. NashBio IDs(Google Workspace Account) Used for Unique Identification/ Authentication of End Users:
-   1. NashBio IDs With No Termination Date: NashBio IDs that are created via automated HR feed as part of the onboarding process have no termination date and will remain active until HR reveives notification to update the feed to include a termination date. NashBio IDs managed by HR automated feed do not use the request and deactivation procedures described below. 
+   1. NashBio IDs With No Termination Date: NashBio IDs that are created as part of the onboarding process have no termination date and will remain active until HR recieves notification that access will be terminated.
    2. NashBio IDs(Google Workspace Account) for Term Positions:
       * NashBio IDs for Term Positions shall only be active for the period of time necessary for the Term employee to fulfill their job duties for NashBio at which time the NashBio ID must be deactivated by the NashBio ID Requestor. NashBio IDs for Term Positions may be active for a maximum of one year at which time they will need to be deactivated if not renewed. renewal of a NashBio Id for a Term Posistion may only occur if there is an ongoing business need. 
       * It is the responsibility of NashBio ID Requestor to ensure the Term Position NashBio ID is active for the appropriate period of time.

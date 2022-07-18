@@ -42,3 +42,7 @@ Documentation - 164.316(b)(1)(i) | Policy Management Policy | Partially
 Notification in the Case of Breach - 13402(a) and (b) | Breach Policy | Partially
 Timelines of Notification - 13402(d)(1) | Breach Policy | Partially
 Content of Notification - 13402(f)(1) | Breach Policy | Partially
+
+## 2.2 VUMC HIPAA policies
+
+VUMC policies covering HIPAA inheritance can be found here, https://www.vumc.org/sponsored-programs/health-insurance-portability-and-accountability-act-hipaa

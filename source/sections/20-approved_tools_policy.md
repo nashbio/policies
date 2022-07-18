@@ -9,22 +9,9 @@ Nashbio utilizes a suite of approved software tools for internal use by workforc
 
 ## 20.2 List of Approved Tools
 
-* **GitHub**. GitHub is an open source tool built on top of Git, the version control platform. It is utilized for storage of configuration scripts and other infrastructure automation tools, as well as for source and version control of application code used by Nashbio.
-* **Google Drive**. Google Drive is used for storage of files and document generation.
-* **Google Workspace**. Used for email and document collaboration.
-* **Google Cloud Platform**. GCP is the platform used to power NashBio backend services.
-* **Looker**. 
-* **AWS**. 
-* **TeamWorks**.
-* **GORT**.
-* **Trello**.
-* **Freshbooks**.
-* **Hub Spot**.
-* **LucidChart**
-* **Microsoft Office 365**
+List of approved NashBio tools, https://docs.google.com/spreadsheets/d/1z-hMWa1RkqOCjRZ138MBCuXwFiRIj7612pb5q9r_d30/edit#gid=0
 
 ## 20.3 Application Policies
 
 1. All software subscriptions require approval from the Security Officer prior to approval.
-2. All software, SAAS applications undergo a security review  prior to subscribing and implementation. 
-3. All Software.
+2. All software, SaaS applications undergo a security review prior to subscribing and implementation. 
