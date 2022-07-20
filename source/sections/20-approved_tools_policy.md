@@ -9,9 +9,9 @@ Nashbio utilizes a suite of approved software tools for internal use by workforc
 
 ## 20.2 List of Approved Tools
 
-List of approved NashBio tools, https://docs.google.com/spreadsheets/d/1z-hMWa1RkqOCjRZ138MBCuXwFiRIj7612pb5q9r_d30/edit#gid=0
+[List of approved NashBio tools](https://docs.google.com/spreadsheets/d/1z-hMWa1RkqOCjRZ138MBCuXwFiRIj7612pb5q9r_d30/edit#gid=0).
 
 ## 20.3 Application Policies
 
 1. All software subscriptions require approval from the Security Officer prior to approval.
-2. All software, SaaS applications undergo a security review prior to subscribing and implementation. 
+2. All software, SAAS applications undergo a security review  prior to subscribing and implementation. 

@@ -133,7 +133,7 @@ The Recovery Phase represents the SIRT's effort to restore the affected system(s
 The Follow-up Phase represents the review of the security incident to look for "lessons learned" and to determine whether the process that was taken could have been improved in any way. It is recommended all security incidents be reviewed shortly after resolution to determine where response could be improved. Timeframes may extend to one to two weeks post-incident.
 
 1. Responders to the security incident (SIRT Team and technical security resource) meet to review the documentation collected during the security incident.
-2. Create a "lessons learned" document and attach it to the completed [SIR Form](https://docs.google.com/document/d/1_26Cxzayj4Mr8XytkwOqcVDxFXxZ9vW8254NfbNiHro/).
+2. Create a "lessons learned" document and attach it to the completed [SIR Form](sections/sir-form.doc).
    1. Evaluate the cost and impact of the security incident to NashBio using the documents provided by the SIRT and the technical security resource.
    2. Determine what could be improved.
    3. Communicate these findings to Senior Management for approval and for implementation of any recommendations made post-review of the security incident.
@@ -150,4 +150,4 @@ Current members of the NashBio SIRT:
 
 * Security Officer, Jud Scheinder, CTO
 * Privacy Officer, Elizabeth Ann Stringer, CSO
-* Senior Engineer, Emmanuel Villa
+* Data Engineer, Coleman Harris

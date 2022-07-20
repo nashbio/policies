@@ -47,10 +47,11 @@ Nashbio defines two categories of systems from a disaster recovery perspective.
 
 ## 13.2 Line of Succession
 
-The following order of succession to ensure that decision-making authority for the Nashbio Contingency Plan is uninterrupted. The Chief Technology Officer (CTO) is responsible for ensuring the safety of personnel and the execution of procedures documented within this Nashbio Contingency Plan. If the CTO is unable to function as the overall authority or chooses to delegate this responsibility to a successor, the CEO or COO shall function as that authority. To provide contact initiation should the contingency plan need to be initiated, please use the contact list below.
+The following order of succession to ensure that decision-making authority for the Nashbio Contingency Plan is uninterrupted. The Chief Technology Officer (CTO) is responsible for ensuring the safety of personnel and the execution of procedures documented within this Nashbio Contingency Plan. If the CTO is unable to function as the overall authority or chooses to delegate this responsibility to a successor, the CEO or CSO shall function as that authority. To provide contact initiation should the contingency plan need to be initiated, please use the contact list below.
 
 * Jud Schneider, CTO/Security Officer: 615-498-9576, jud@nashvillebiosciences.com
 * Leeland Ekstrom, CEO/Privacy Officer: 617-899-0939, leeland@nashvillebiosciences.com
+* Elizabeth Ann Stringer, CSO: elizabethann@nashvillebiosciences.com 
 
 ## 13.3 Responsibilities
 
@@ -58,7 +59,7 @@ The following teams have been developed and trained to respond to a contingency 
 
 1. The **Ops Team** is responsible for recovery of the Nashbio hosted environment, network devices, and all servers. Members of the team include personnel who are also responsible for the daily operations and maintenance of Nashbio. The team leader is the CTO and directs the Engineering Team.
 
-Members of the Ops team must maintain local copies of the contact information from [§13.2](#13.2-line-of-succession). Additionally, the CTO must maintain a local copy of this policy in the event Internet access is not available during a disaster scenario.
+Members of the Ops and Web Services teams must maintain local copies of the contact information from [§13.2](#13.2-line-of-succession). Additionally, the CTO must maintain a local copy of this policy in the event Internet access is not available during a disaster scenario.
 
 ## 13.4 Testing and Maintenance
 
@@ -113,22 +114,20 @@ Recovery Goal: The goal is to rebuild Nashbio infrastructure to a production sta
 
 The tasks outlines below are not sequential and some can be run in parallel.
 
-1. Contact Partners and Customers affected 
-2. Assess damage to the environment 
-3. Begin replication of new environment using automated and tested scripts. At this point it is determined whether to recover in AWS, Azure, or SoftLayer. 
-4. Test new environment using pre-written tests 
-5. Test logging, security, and alerting functionality 
-6. Assure systems are appropriately patched and up to date. 
-7. Deploy environment to production 
-8. Update DNS to new environment. 
+1. Contact Partners and Customers affected.
+2. Assess damage to the environment.
+3. Begin replication of new environment using automated and tested scripts. At this point it is determined whether to recover in AWS, Azure, or a different GCP Region. 
+4. Test logging, security, and alerting functionality.
+5. Assure systems are appropriately patched and up to date. 
+6. Deploy environment to production. 
+7. Update DNS to new environment. 
 
 ### 13.5.3 Reconstitution Phase
 
 This section discusses activities necessary for restoring Nashbio operations at the original or new site. The goal is to restore full operations within 24 hours of a disaster or outage. When the hosted data center at the original or new site has been restored, Nashbio operations at the alternate site may be transitioned back. The goal is to provide a seamless transition of operations from the alternate site to the computer center.
 
 1. Original or New Site Restoration
-   * Begin replication of new environment using automated and tested scripts.
-   * Test new environment using pre-written tests. 
+   * Begin replication of new environment using automated and tested scripts. 
    * Test logging, security, and alerting functionality. 
    * Deploy environment to production 
    * Assure systems are appropriately patched and up to date. 

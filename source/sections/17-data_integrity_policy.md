@@ -25,10 +25,12 @@ Production systems that create, receive, store, or transmit Customer data (herea
 ## 17.4 Prevention of Malware on Production Systems
 
 1. All Production Systems must have Cavirin scan the docker image prior to running and at reboot to assure no malware is present. Detected malware is evaluated and removed.
-2. Virus scanning software is run on all Production Systems for anti-virus protection.
-   * Hosts are scanned daily for malicious binaries in critical system paths.
-   * The malware signature database is checked hourly and automatically updated if new signatures are available.
-   * Logs of virus scans are maintained according to the requirements outlined in [§8.6](#8.6-audit-log-security-controls-and-backup).
+2. Virus scanning software is run on all Production Systems for anti-virus protection, and documented on a GCP monitored server. GCP includes built-in security to protect against ransomware attacks including:
+   * Global infrastructure designed with security throughout the information-processing lifecycle;
+   * Built-in security such as monitoring, threat detection, data loss prevention, and access controls;
+   * High availability with regional clusters and global load balancers;
+   * Built-in backup; and
+   * Automation capabilities using infrastructure as code and configuration guardrails.
 3. All Production Systems are to only be used for Nashbio business needs.
 
 ## 17.5 Patch Management
@@ -36,7 +38,7 @@ Production systems that create, receive, store, or transmit Customer data (herea
 1. Software patches and updates will be applied to all systems in a timely manner. In the case of routine updates, they will be applied after thorough testing. In the case of updates to correct known vulnerabilities, priority will be given to testing to speed the time to production. Critical security patches are applied within 30 days from testing and all security patches are applied within 90 days after testing.
     * In the case of DaaS Customers, updates to Application and Database versions are the responsibility of Customers, though Nashbio will, at its own discretion, notify and recommend updates to Customer systems.
 2. Administrators subscribe to mailing lists to ensure that they are using current versions of all Nashbio-managed software on Production Systems.
-3. NashBio uses managed services where it can. Patch Management is performed by Google.
+3. NashBio uses managed services where it can. Patch Management is performed by Google or AWS according to their Terms Of Use (TOU).
 
 ## 17.6 Intrusion Detection and Vulnerability Scanning
 
@@ -46,8 +48,8 @@ Production systems that create, receive, store, or transmit Customer data (herea
 ## 17.7 Production System Security
 
 1. System, network, and server security is managed and maintained by the Security Officer in conjunction with the Dev Ops team.
-2. Up-to-date system lists and architecture diagrams are kept for all production environments.
-3. Access to Production Systems is controlled using centralized tools and two-factor authentication.
+   * Up-to-date system lists and architecture diagrams are kept for all production environments.
+2. Access to Production Systems is controlled using centralized tools and two-factor authentication.
 
 ## 17.8 Production Data Security
 
@@ -61,7 +63,7 @@ Production systems that create, receive, store, or transmit Customer data (herea
 
 ## 17.9 Transmission Security
 
-1. All data transmission is encrypted end to end using encryption keys managed by Nashbio. Encryption is not terminated at the network end point, and is carried through to the application.
+1. All data transmission is encrypted end to end using encryption keys managed by Nashbio or GCP. Encryption is not terminated at the network end point, and is carried through to the application.
 2. Transmission encryption keys and machines that generate keys are protected from unauthorized access. Transmission encryption key material is protected with access controls such that the key material is only accessible by privileged accounts.
 3. Transmission encryption keys use a minimum of 4096-bit RSA keys, or keys and ciphers of equivalent or higher cryptographic strength (e.g., 256-bit AES session keys in the case of IPsec encryption).
 4. Transmission encryption keys are limited to use for one year and then must be regenerated.

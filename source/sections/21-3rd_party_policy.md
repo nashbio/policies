@@ -20,7 +20,7 @@ Nashbio makes every effort to assure all 3rd party organizations are compliant a
 ## 21.2 Policies to Assure 3rd Parties Support Nashbio Compliance
 
 1. All connections and data in transit between the Nashbio Platform and 3rd parties are encrypted end to end.
-2. A standard business associate agreement with Customers and Partners is defined and includes the required security controls in accordance with the organization's security policies. Additionally, responsibility is assigned in these agreements.
+2. A standard business associate agreement if applicable with Customers and Partners is defined and includes the required security controls in accordance with the organization's security policies. Additionally, responsibility is assigned in these agreements.
 3. Nashbio has Service Level Agreements (SLAs) with Subcontractors with an agreed service arrangement addressing liability, service definitions, security controls, and aspects of services management.
    * Subcontractors must coordinate, manage, and communicate any changes to services provided to Nashbio.
    * Changes to 3rd party services are classified as configuration management changes and thus are subject to the policies and procedures described in [§9](#9.-configuration-management-policy); substantial changes to services provided by 3rd parties will invoke a Risk Assessment as described in [§4.2](#4.2-risk-management-policies).
