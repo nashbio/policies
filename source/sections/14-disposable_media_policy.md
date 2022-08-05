@@ -14,7 +14,7 @@ ePHI is only stored in our hosted environment using encrypted storage. Nashbio d
 
 * 164.310(d)(1) - Device and Media Controls
 
-## 14.2 Disposable Media Systems Containing EPHI Policy
+## 14.2 Disposable Media Systems Containing ePHI Policy
 
 1. All removable media is restricted, audited, and is encrypted.
 2. Nashbio assumes all disposable media in its Platform may contain ePHI, so it treats all disposable media with the same protections and disposal policies.
