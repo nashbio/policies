@@ -1,6 +1,6 @@
 # 15. IDS Policy
 
-In order to preserve the integrity of data that Nashbio stores, processes, or transmits for Customers, Nashbio implements strong intrusion detection tools and policies to proactively track and retroactively investigate unauthorized access. Nashbio currently utilizes [Cavirin](http://www.cavirin.com/) to track file system integrity, monitor log data, and detect rootkit access.
+In order to preserve the integrity of data that Nashbio stores, processes, or transmits for Customers, Nashbio implements strong intrusion detection tools and policies to proactively track and retroactively investigate unauthorized access. Nashbio currently utilizes [Cavirin](http://www.cavirin.com/) and SCC to track file system integrity, monitor log data, and detect rootkit access.
 
 ## 15.1 Applicable Standards
 
@@ -22,3 +22,4 @@ In order to preserve the integrity of data that Nashbio stores, processes, or tr
 4. Nashbio firewalls monitor all incoming traffic to detect potential denial-of-service attacks. Suspected attack sources are blocked automatically. Additionally, our hosting provider actively monitors its network to detect denial-of-service attacks.
 5. All new firewall rules and configuration changes are tested before being pushed into production. All firewall and router rules are reviewed every quarter.
 6. Nashbio utilizes redundant firewall on network perimeters.
+7. All access is shuttled through Identity Aware Proxy for all VMS, except known configuration authorized by the CTO.

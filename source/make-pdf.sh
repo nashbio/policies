@@ -28,3 +28,4 @@ pandoc ./sections/21-3rd_party_policy.md -s -o ~/Desktop/policies-pdf/21-3rd_par
 pandoc ./sections/22-key_definitions.md -s -o ~/Desktop/policies-pdf/22-key_definitions.pdf
 pandoc ./sections/23-nashbio_hipaa_business_associate_agreement.md -s -o ~/Desktop/policies-pdf/23-nashbio_hipaa_business_associate_agreement.pdf
 pandoc ./sections/24-hipaa_mapping_to_nashbio_controls.md -s -o ~/Desktop/policies-pdf/24-hipaa_mapping_to_nashbio_controls.pdf
+pandoc ./sections/25-Guidelines_for_using_notes_in_the_SD.md -s -o ~/Desktop/policies-pdf/25-Guidelines_for_using_notes_in_the_SD.pdf

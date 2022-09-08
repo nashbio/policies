@@ -41,6 +41,12 @@ This policy establishes the scope, objectives, and procedures of NashBio's infor
   4. Once the Risk Management Procedures are complete, along with corresponding documentation, the Security Officer approves or rejects the Issue. If the Issue is rejected, it goes back for further review and documentation.
   5. If the review is approved, the Security Officer then marks the Issue as Done, adding any pertinent notes required.
 9. The Risk Management Procedure is monitored on a quarterly basis using the Quality Management System reporting to assess compliance with above policy.
+10. No RHI or PHI may be shared with external entities without approval from the security officer, all distributions of this health inofrmation must be documented in an agreement that is submitted for review and signature.
+11. Any data must first be assessed for institutional risk (using the Human Data Risk Assessment Tool HDRAT), and be assigned to one of the following categories:
+  1. Minimal risk: requires standard review and approval by the relevant department. This must only be de identifiable data 
+  2. Medium risk: requires review and approval by the office of contracts management or the security officer, if not approved it may go to executive leadership for final review and approval.
+  3. High Risk: requires review and approval by members of executive leadership.
+12. If any changes occur to the data, a new risk assessment must be made on the data in order for it to be shared with external entities again. 
 
 ## 4.3 Risk Management Procedures
 
@@ -73,15 +79,15 @@ The intent of completing a risk assessment is to determine potential threats and
   * Output - Magnitude of impact rating of low (10), medium (50), or high (100). Refer to the [NIST SP 800-30](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf) definitions of low, medium, and high.
 
 * Step 7. Risk Determination
-  * Establish a risk level. By multiplying the ratings from the likelihood determination and impact analysis, a risk level is determined. This represents the degree or level of risk to which an IT system, facility, or procedure might be exposed if a given vulnerability were exercised. The risk rating also presents actions that senior management must take for each risk level.
-  * Output - Risk level of low (1-10), medium (>10-50) or high (>50-100). Refer to the [NIST SP 800-30](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf) definitions of low, medium, and high.
+  * Establish a risk level using the following rubrick. The risk rating also presents actions that senior management must take for each risk level.
+  * Output - Risk level of low (<20), medium (21-40) or high (>40). Refer to the [NIST SP 800-30](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf) definitions of low, medium, and high.
 
 * Step 8. Control Recommendations
   * Identify controls that could reduce or eliminate the identified risks, as appropriate to the organization's operations to an acceptable level. Factors to consider when developing controls may include effectiveness of recommended options (i.e., system compatibility), legislation and regulation, organizational policy, operational impact, and safety and reliability. Control recommendations provide input to the risk mitigation process, during which the recommended procedural and technical security controls are evaluated, prioritized, and implemented.
   * Output - Recommendation of control(s) and alternative solutions to mitigate risk.
 
 * Step 9. Results Documentation
-  * Results of the risk assessment are documented in an official report, spreadsheet, or briefing and provided to senior management to make decisions on policy, procedure, budget, and Platform operational and management changes.
+  * Results of the risk assessment are documented in an official report, spreadsheet, or briefing and provided to senior management to make decisions on policy, procedure, budget, and Platform operational and management changes. The results should be kept for auditing purposes for at least 6 years from when the risk assessment occured. 
   * Output - A risk assessment report that describes the threats and vulnerabilities, measures the risk, and provides recommendations for control implementation.
 
 ### 4.3.2 Risk Mitigation
@@ -125,7 +131,7 @@ Risk mitigation involves prioritizing, evaluating, and implementing the appropri
 
 The two principle components of the risk management process - risk assessment and risk mitigation - will be carried out according to the following schedule to ensure the continued adequacy and continuous improvement of NashBio's information security program:
 
-* Scheduled Basis - an overall risk assessment of NashBio's information system infrastructure will be conducted annually. The assessment process should be completed in a timely fashion so that risk mitigation strategies can be determined and included in the corporate budgeting process.
+* Scheduled Basis - an overall risk assessment of NashBio's information system infrastructure will be conducted annually by the security officer. The assessment process should be completed in a timely fashion so that risk mitigation strategies can be determined and included in the corporate budgeting process.
 * Throughout a System's Development Life Cycle - from the time that a need for a new, untested information system configuration and/or application, and/or upon the initiation of major system architectural change is identified through the time it is disposed of, ongoing assessments of the potential threats to a system and its vulnerabilities should be undertaken as a part of the maintenance of the system.
 * As Needed - the Security Officer (or other designated employee) or Risk Management Team may call for a full or partial risk assessment in response to changes in business strategies, information technology, information sensitivity, threats, legal liabilities, or other significant factors that affect NashBio's Platform.
 

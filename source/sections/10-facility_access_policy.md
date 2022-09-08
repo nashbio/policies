@@ -35,7 +35,6 @@ Also of note, all physical office locations of Nashbio are designated as remote 
    * Only authorized workforce members receive access to restricted areas (as determined by the Security Officer).
    * Access and keys are revoked upon termination of workforce members.
    * Workforce members must report a lost and/or stolen key(s) to the Security Officer.
-   * The Security Officer facilitates the changing of the lock(s) within 7 days of a key being reported lost/stolen
 8. Enforcement of Facility Access Policies
    * Report violations of this policy to the restricted area's department team leader, supervisor, manager, or director, or the Privacy Officer.
    * Workforce members in violation of this policy are subject to disciplinary action, up to and including termination.
